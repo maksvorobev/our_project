@@ -18,9 +18,11 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 set (SOURCE
     ./source/mainwindow.cpp
     ./source/main.cpp
+    ./source/Forward_fourier_decomposer.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
+    ./headers/Forward_fourier_decomposer.h
     )
 
 set(PROJECT_SOURCES
