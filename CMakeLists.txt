@@ -19,10 +19,12 @@ set (SOURCE
     ./source/mainwindow.cpp
     ./source/main.cpp
     ./source/Forward_fourier_decomposer.cpp
+    ./source/Signal.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
     ./headers/Forward_fourier_decomposer.h
+    ./headers/Signal.h
     )
 
 set(PROJECT_SOURCES
