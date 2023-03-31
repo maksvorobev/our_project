@@ -13,18 +13,20 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
-
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets PrintSupport)
 
 set (SOURCE
     ./source/mainwindow.cpp
     ./source/main.cpp
     ./source/Forward_fourier_decomposer.cpp
     ./source/Signal.cpp
+    ./source/qcustomplot.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
     ./headers/Forward_fourier_decomposer.h
     ./headers/Signal.h
+    ./headers/qcustomplot.h
     )
 
 set(PROJECT_SOURCES
@@ -55,6 +57,7 @@ else()
 endif()
 
 target_link_libraries(untitled PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(untitled PRIVATE Qt${QT_VERSION_MAJOR}::Widgets PRIVATE Qt${QT_VERSION_MAJOR}::PrintSupport)
 
 set_target_properties(untitled PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
