@@ -21,12 +21,14 @@ set (SOURCE
     ./source/Forward_fourier_decomposer.cpp
     ./source/Signal.cpp
     ./source/qcustomplot.cpp
+    ./source/Reverse_fourier_decomposer.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
     ./headers/Forward_fourier_decomposer.h
     ./headers/Signal.h
     ./headers/qcustomplot.h
+    ./headers/Reverse_fourier_decomposer.h
     )
 
 set(PROJECT_SOURCES
