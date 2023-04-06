@@ -22,7 +22,7 @@ void Forward_fourier_decomposer::Decompose(){
             my_imag += x_n[n]*sin(theta);
             
         }
-        X_m_m[m] = pow(my_real*my_real + my_imag*my_imag, 0.5);
+        X_m_m[m] = pow(my_real*my_real + my_imag*my_imag, 0.5)/N;
         X_m_r[m] = my_real/N;
         X_m_im[m] = my_imag/N;
         f_m[m] = (m*sampling_frequency/N);
@@ -42,7 +42,7 @@ vector<double> Forward_fourier_decomposer::Get_A_Magnitude() const{
 
 
 
-vector<double> Forward_fourier_decomposer::Fet_F() const{
+vector<double> Forward_fourier_decomposer::Get_F() const{
     return f_m;
 }
 

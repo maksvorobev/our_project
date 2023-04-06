@@ -4,7 +4,7 @@
 
 
 
-Signal::Signal(vector<double>& U,double dt, double T) : U(U), dt(dt), T(T){}
+Signal::Signal(const vector<double>& U,double dt, double T) : U(U), dt(dt), T(T){}
 
 const vector<double>& Signal::getU() const {return U;}
 

@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.5)
 
 project(untitled VERSION 0.1 LANGUAGES CXX)
 
+
+# set(CMAKE_CXX_FLAGS "-Wall -Wextra -fsanitize=address")
+
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)
@@ -22,6 +26,7 @@ set (SOURCE
     ./source/Signal.cpp
     ./source/qcustomplot.cpp
     ./source/Reverse_fourier_decomposer.cpp
+    ./source/Filters/Low_pass_filter.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
@@ -29,6 +34,7 @@ set (HEADERS
     ./headers/Signal.h
     ./headers/qcustomplot.h
     ./headers/Reverse_fourier_decomposer.h
+    ./headers/Filters/Low_pass_filter.h
     )
 
 set(PROJECT_SOURCES

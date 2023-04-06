@@ -3,7 +3,7 @@
 
 
 
-Reverse_fourier_decomposer::Reverse_fourier_decomposer(const std::pair<vector<double>, vector<double>>& pr): pr(pr), size(pr.second.size()) {}
+Reverse_fourier_decomposer::Reverse_fourier_decomposer(std::pair<vector<double>, vector<double>>& pr): pr(pr), size(pr.first.size()) {}
 
 void Reverse_fourier_decomposer::Decompose(){
 

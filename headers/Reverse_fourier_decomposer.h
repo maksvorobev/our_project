@@ -11,12 +11,12 @@ using std::vector;
 
 class Reverse_fourier_decomposer{
 private:
-    const std::pair<vector<double>, vector<double>>& pr; // вектор амлитут (real(X))
+    std::pair<vector<double>, vector<double>>& pr; // вектор амлитут (real(X))
     vector<double> x_m;
-    const size_t size;
+    size_t size;
                         
 public:
-    explicit Reverse_fourier_decomposer(const std::pair<vector<double>, vector<double>>& pr);
+    Reverse_fourier_decomposer(std::pair<vector<double>, vector<double>>& pr);
 
     void Decompose();
 

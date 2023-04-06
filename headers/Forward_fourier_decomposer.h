@@ -27,7 +27,7 @@ public:
     void Decompose();
     void print_values() const; // функция виводит аплитуды с частотами 
     vector<double> Get_A_Magnitude() const;
-    vector<double> Fet_F() const;
+    vector<double> Get_F() const;
     std::pair<vector<double>, vector<double>> Get_A_Real_and_Im() const; // возвращает прау из векторов real и img частей амлитуд 
       
 };
