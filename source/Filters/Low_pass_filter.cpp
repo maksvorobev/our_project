@@ -20,6 +20,10 @@ Signal Low_pass_filter::Get_Signal(){
             A_real_new.push_back(p.first[i]);
             A_imag_new.push_back(p.second[i]);
         }
+        else {
+            A_real_new.push_back(0);
+            A_imag_new.push_back(0);
+        }
     }
     std::pair<vector<double>, vector<double>> pp = make_pair(A_real_new, A_imag_new);
     Reverse_fourier_decomposer Reverse(pp);
