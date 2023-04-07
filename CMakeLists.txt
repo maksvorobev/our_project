@@ -27,6 +27,7 @@ set (SOURCE
     ./source/qcustomplot.cpp
     ./source/Reverse_fourier_decomposer.cpp
     ./source/Filters/Low_pass_filter.cpp
+    ./source/Filters/High_pass_filter.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
@@ -35,6 +36,7 @@ set (HEADERS
     ./headers/qcustomplot.h
     ./headers/Reverse_fourier_decomposer.h
     ./headers/Filters/Low_pass_filter.h
+    ./headers/Filters/High_pass_filter.h
     )
 
 set(PROJECT_SOURCES
