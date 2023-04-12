@@ -1,18 +1,22 @@
 #pragma once
 #include <vector>
+#include <string>
+#include <fstream>
+#include <iostream>
 using std::vector;
+using std::string;
 
 
-class Signal{
+class Signal {
 private:
-    const vector<double> U;
-    const double dt;
-    const double T;
+    vector<double> U;
+    double dt;
+    double T;
 public:
-    Signal(const vector<double>& U,double dt, double T);
-    const vector<double>& getU() const;
-    double getdt() const;
-    double getT() const ;
-
-    
+    Signal(vector<double>& U, double dt, double T);
+    Signal(string path);
+    Signal();
+    const vector<double>& getU();
+    double getdt();
+    double getT();
 };
