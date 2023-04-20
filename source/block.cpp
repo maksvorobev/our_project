@@ -25,12 +25,17 @@ bool Block::addInput(Block* block)
     return flag;
 }
 
-void Block::setSignal(Signal* signal) {}
+void Block::set_in_input_Signal(Signal* signal) {}
 
-Signal* Block::getSignal(){}
+Signal* Block::getSignal()
+{
+
+}
 
 
-Signal* Block::work() {}
+
+
+void  Block::work() {}
 
 Block::~Block()
 {

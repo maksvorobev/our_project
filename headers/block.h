@@ -16,13 +16,13 @@ public:
     bool addOutput(Block* block);
     bool addInput(Block* block);
 
-    virtual void setSignal(Signal* signal);
+    virtual void set_in_input_Signal(Signal* signal);
 
     virtual Signal* getSignal();
 
     bool ready();
 
-    virtual Signal* work();
+    virtual void work();
 
 
 
@@ -30,7 +30,8 @@ public:
     virtual ~Block();
 
 protected:
-    std::vector<Signal*> all_signals;
+    std::vector<Signal*> input_signals;
+    Signal*  output_signal;
     std::vector<Block*> input;
     std::vector<Block*> output;
     int max_input {1};
