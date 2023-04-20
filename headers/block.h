@@ -10,8 +10,8 @@ class Block: public QWidget
 public:
     Block(QWidget *parent = nullptr);
 
-    const std::vector<Block*>&  getOutput();
-    const std::vector<Block*>& getInput();
+    const std::vector<Block*>&  getOutput();   //?
+    const std::vector<Block*>& getInput();     //?
 
     bool addOutput(Block* block);
     bool addInput(Block* block);
@@ -22,7 +22,10 @@ public:
 
     bool ready();
 
-    virtual void work();
+    virtual Signal* work();
+
+
+
 
     virtual ~Block();
 

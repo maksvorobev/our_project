@@ -30,7 +30,7 @@ void Block::setSignal(Signal* signal) {}
 Signal* Block::getSignal(){}
 
 
-void Block::work() {}
+Signal* Block::work() {}
 
 Block::~Block()
 {
