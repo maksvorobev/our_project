@@ -17,5 +17,5 @@ public:
     Generator(string path);
     void setSignal(Signal* signal);
     void work() override;
-    Signal* getSignal();
+    Signal* getSignal() override;
 };

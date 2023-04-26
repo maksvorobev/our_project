@@ -19,6 +19,6 @@ void Oscilloscope::work()
         output_signal = input_signals[0];
 }
 
-void Oscilloscope::setSignal(Signal* signal){input_signals.push_back(signal);}
+void Oscilloscope::set_in_input_Signal(Signal* signal){input_signals.push_back(signal);}
 
 Signal* Oscilloscope::getSignal(){return output_signal;}

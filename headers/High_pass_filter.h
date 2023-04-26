@@ -1,7 +1,7 @@
 #pragma ones
-#include "../Signal.h"
-#include "../Forward_fourier_decomposer.h"
-#include "../Reverse_fourier_decomposer.h"
+#include "Signal.h"
+#include "Forward_fourier_decomposer.h"
+#include "Reverse_fourier_decomposer.h"
 
 class High_pass_filter{
 private:

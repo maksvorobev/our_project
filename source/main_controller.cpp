@@ -31,7 +31,7 @@ void Main_Controller::startCircuit()
         {
             for (Block* block : out)
             {
-                block->setSignal(outSignal);
+                block->set_in_input_Signal(outSignal);
                 if (block->ready())
                 {
                     queue.enqueue(block);

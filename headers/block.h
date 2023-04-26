@@ -16,7 +16,7 @@ public:
     bool addOutput(Block* block);
     bool addInput(Block* block);
 
-    virtual void setSignal(Signal* signal);
+    virtual void set_in_input_Signal(Signal* signal);
 
     virtual Signal* getSignal();
 

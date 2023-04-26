@@ -1,6 +1,6 @@
 #pragma ones
 #include "./block.h"
-#include "./Filters/Low_pass_filter.h"
+#include "Low_pass_filter.h"
 #include <QSharedPointer>
 
 

@@ -13,7 +13,7 @@ public:
     void makePlot();
     void graphShow();
     void work() override;
-    void setSignal(Signal* signal) override;
+    void set_in_input_Signal(Signal* signal) override;
     Signal* getSignal() override;
 
 

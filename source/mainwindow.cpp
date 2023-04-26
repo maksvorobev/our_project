@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     std::vector<double> U = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0};
     Signal* signal = new Signal(U, 1.0, 11.0);
+    //Low_pass_filter* low_filter = new Low_pass_filter();
     Generator* generator = new Generator(signal);
     this->oscilloscope = new Oscilloscope();
     generator->addOutput(oscilloscope);
