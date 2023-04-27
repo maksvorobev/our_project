@@ -2,7 +2,6 @@
 #define MAIN_CONTROLLER_H
 #include<QQueue>
 #include"generator.h"
-//#include"Low_pass_filter.h"
 
 class Main_Controller
 {

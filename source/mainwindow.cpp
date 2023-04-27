@@ -16,15 +16,13 @@ MainWindow::MainWindow(QWidget *parent)
     Signal* signal = new Signal(U, 1.0, 11.0);
     //Low_pass_filter* low_filter = new Low_pass_filter();
     Generator* generator = new Generator(signal);
-    this->oscilloscope = new Oscilloscope();
-    generator->addOutput(oscilloscope);
+    block_low_pass_filter* low_filter = new block_low_pass_filter(0.15);
+    this->oscilloscope1 = new Oscilloscope();
+    this->oscilloscope2 = new Oscilloscope();
+    generator->addOutput(oscilloscope1);
+    oscilloscope1->addOutput(low_filter);
+    low_filter->addOutput(oscilloscope2);
     main_controller.addGenerator(generator);
-}
-
-
-void MainWindow::on_pushButton_clicked()
-{   
-    oscilloscope->graphShow();
 }
 
 MainWindow::~MainWindow()
@@ -36,4 +34,14 @@ void MainWindow::on_startButton_clicked()
 {
     main_controller.startCircuit();
 
+}
+
+void MainWindow::on_Oscilloscope1_clicked()
+{
+    oscilloscope1->graphShow();
+}
+
+void MainWindow::on_Oscilloscope2_clicked()
+{
+    oscilloscope2->graphShow();
 }

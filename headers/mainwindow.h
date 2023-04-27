@@ -5,6 +5,7 @@
 #include"oscilloscope.h"
 #include"generator.h"
 #include"main_controller.h"
+#include"block_low_pass_filter.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,8 +24,13 @@ private slots:
 
     void on_startButton_clicked();
 
+    void on_Oscilloscope1_clicked();
+
+    void on_Oscilloscope2_clicked();
+
 private:
     Ui::MainWindow *ui;
-    Oscilloscope* oscilloscope;
+    Oscilloscope* oscilloscope1;               //KOSTYL
+    Oscilloscope* oscilloscope2;
     Main_Controller main_controller;
 };
