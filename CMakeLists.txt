@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(untitled VERSION 0.1 LANGUAGES CXX)
-
-
-# set(CMAKE_CXX_FLAGS "-Wall -Wextra -fsanitize=address")
-
+project(our_project LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -17,33 +13,46 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets PrintSupport)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS PrintSupport REQUIRED)
+
 
 set (SOURCE
     ./source/mainwindow.cpp
     ./source/main.cpp
     ./source/Forward_fourier_decomposer.cpp
     ./source/Signal.cpp
-    ./source/qcustomplot.cpp
-    ./source/Reverse_fourier_decomposer.cpp
-    ./source/Filters/Low_pass_filter.cpp
-    ./source/Filters/High_pass_filter.cpp
+    ./qcustomplot.cpp
+    ./source/graph.cpp
+    ./source/oscilloscope.cpp
+    ./source/main_controller.cpp
     ./source/block.cpp
-
+    ./source/generator.cpp
+    ./source/block_low_pass_filter.cpp
+    ./source/Forward_fourier_decomposer.cpp
+    ./source/Reverse_fourier_decomposer.cpp
+    ./source/Filters/High_pass_filter.cpp
+    ./source/Filters/Low_pass_filter.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
     ./headers/Forward_fourier_decomposer.h
-    ./headers/Signal.h
-    ./headers/qcustomplot.h
     ./headers/Reverse_fourier_decomposer.h
-    ./headers/Filters/Low_pass_filter.h
-    ./headers/Filters/High_pass_filter.h
+    ./headers/Signal.h
+    ./qcustomplot.h
+    ./headers/graph.h
+    ./headers/oscilloscope.h
+    ./headers/main_controller.h
     ./headers/block.h
+    ./headers/generator.h
+    ./headers/block_low_pass_filter.h
+    ./headers/Forward_fourier_decomposer.h
+    ./headers/Filters/High_pass_filter.h
+    ./headers/Filters/Low_pass_filter.h
     )
 
 set(PROJECT_SOURCES
         mainwindow.ui
+        ./source/graph.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -60,8 +69,8 @@ else()
         add_library(untitled SHARED
             ${PROJECT_SOURCES}
         )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
+#Define properties for Android with Qt 5 after find_package() calls as:
+    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(untitled
             ${PROJECT_SOURCES} ${SOURCE} ${HEADERS}
@@ -69,16 +78,15 @@ else()
     endif()
 endif()
 
-target_link_libraries(untitled PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(untitled PRIVATE Qt${QT_VERSION_MAJOR}::Widgets PRIVATE Qt${QT_VERSION_MAJOR}::PrintSupport)
 
-set_target_properties(untitled PROPERTIES
-    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
-)
+#set_target_properties(untitled PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
+#    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+#    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+#    MACOSX_BUNDLE TRUE
+#    WIN32_EXECUTABLE TRUE
+#)
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(untitled)
