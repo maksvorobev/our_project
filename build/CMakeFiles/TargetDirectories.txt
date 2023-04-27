@@ -1,0 +1,4 @@
+/home/zzzayats/our_project/build/CMakeFiles/edit_cache.dir
+/home/zzzayats/our_project/build/CMakeFiles/rebuild_cache.dir
+/home/zzzayats/our_project/build/CMakeFiles/untitled.dir
+/home/zzzayats/our_project/build/CMakeFiles/untitled_autogen.dir

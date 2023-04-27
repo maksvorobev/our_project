@@ -23,7 +23,7 @@ public:
     bool ready();
 
     virtual void work();
-
+    
 
 
 
@@ -31,7 +31,7 @@ public:
 
 protected:
     std::vector<Signal*> input_signals;
-    Signal*  output_signal;
+    Signal* output_signal;
     std::vector<Block*> input;
     std::vector<Block*> output;
     int max_input {1};
