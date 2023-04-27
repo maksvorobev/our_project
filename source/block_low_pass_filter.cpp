@@ -7,8 +7,8 @@ block_low_pass_filter::block_low_pass_filter(double cutoff_frequency): Block() {
 }
 
 void block_low_pass_filter::set_in_input_Signal(Signal* signal) {
-    this->input_signals.push_back(signal);
-    
+    if (this->input_signals.size() < max_input)
+        this->input_signals.push_back(signal);
 }
 
 
