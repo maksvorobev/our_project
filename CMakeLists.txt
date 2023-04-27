@@ -17,12 +17,9 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS PrintSupport REQUIRED)
 
 
 set (SOURCE
-    ./source/mainwindow.cpp
     ./source/main.cpp
     ./source/Forward_fourier_decomposer.cpp
     ./source/Signal.cpp
-    ./qcustomplot.cpp
-    ./source/graph.cpp
     ./source/oscilloscope.cpp
     ./source/main_controller.cpp
     ./source/block.cpp
@@ -32,14 +29,14 @@ set (SOURCE
     ./source/Reverse_fourier_decomposer.cpp
     ./source/Filters/High_pass_filter.cpp
     ./source/Filters/Low_pass_filter.cpp
+    ./source/form1.cpp
+    ./source/form2.cpp
+    ./source/widget.cpp
     )
 set (HEADERS
-    ./headers/mainwindow.h
     ./headers/Forward_fourier_decomposer.h
     ./headers/Reverse_fourier_decomposer.h
     ./headers/Signal.h
-    ./qcustomplot.h
-    ./headers/graph.h
     ./headers/oscilloscope.h
     ./headers/main_controller.h
     ./headers/block.h
@@ -48,11 +45,16 @@ set (HEADERS
     ./headers/Forward_fourier_decomposer.h
     ./headers/Filters/High_pass_filter.h
     ./headers/Filters/Low_pass_filter.h
+    ./headers/form1.h
+    ./headers/form2.h
+    ./headers/widget.h
     )
 
 set(PROJECT_SOURCES
-        mainwindow.ui
+        ./source/widget.ui
         ./source/graph.ui
+        ./source/form1.ui
+        ./source/form2.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
