@@ -30,7 +30,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+<<<<<<< Updated upstream
     Oscilloscope* oscilloscope1;               //KOSTYL
+=======
+    Oscilloscope* oscilloscope1;
+>>>>>>> Stashed changes
     Oscilloscope* oscilloscope2;
     Main_Controller main_controller;
 };

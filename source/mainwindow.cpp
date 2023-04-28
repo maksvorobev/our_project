@@ -36,11 +36,20 @@ void MainWindow::on_startButton_clicked()
 
 }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 void MainWindow::on_Oscilloscope1_clicked()
 {
     oscilloscope1->graphShow();
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 void MainWindow::on_Oscilloscope2_clicked()
 {
     oscilloscope2->graphShow();
