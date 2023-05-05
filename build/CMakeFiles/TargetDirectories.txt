@@ -1,4 +1,0 @@
-/home/max/untitled/build/CMakeFiles/untitled.dir
-/home/max/untitled/build/CMakeFiles/edit_cache.dir
-/home/max/untitled/build/CMakeFiles/rebuild_cache.dir
-/home/max/untitled/build/CMakeFiles/untitled_autogen.dir
