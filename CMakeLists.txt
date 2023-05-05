@@ -34,6 +34,23 @@ set (SOURCE
     ./source/Filters/Low_pass_filter.cpp
     ./source/widget.cpp
     ./source/form.cpp
+
+    source/logic_of_fronted/mylistwidget.cpp
+    source/logic_of_fronted/CustomFrame.cpp
+    source/logic_of_fronted/MoveItem.cpp
+    source/logic_of_fronted/my_grpah_view.cpp
+    ./FrontedObjects/FrontedOscilloscope.cpp
+    FrontedObjects/VirualLabel.cpp
+    FrontedObjects/DialogWindow.cpp
+    FrontedObjects/FrontedGenerator.cpp
+
+
+
+
+
+
+
+
     )
 set (HEADERS
     ./headers/mainwindow.h
@@ -52,6 +69,23 @@ set (HEADERS
     ./headers/Filters/Low_pass_filter.h
     ./headers/widget.h
     ./headers/form.h
+
+    headers/logic_of_fronted/mylistwidget.h
+    headers/logic_of_fronted/CustomFrame.h
+    headers/logic_of_fronted/MoveItem.h
+    headers/logic_of_fronted/my_grpah_view.h
+    ./FrontedObjects/FrontedOscilloscope.h
+    FrontedObjects/VirualLabel.h
+    FrontedObjects/DialogWindow.h
+    FrontedObjects/FrontedGenerator.h
+
+
+
+
+
+
+
+
     )
 
 set(PROJECT_SOURCES

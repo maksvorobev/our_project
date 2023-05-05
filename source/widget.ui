@@ -186,26 +186,6 @@
     <string>Создать генератор</string>
    </property>
   </widget>
-  <widget class="QWidget" name="widget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>259</y>
-     <width>171</width>
-     <height>121</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget_2" native="true">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>199</y>
-     <width>181</width>
-     <height>131</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
@@ -268,7 +248,54 @@
     <string>Библиотека генераторов</string>
    </property>
   </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>110</y>
+     <width>591</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="my_grpah_view" name="graphicsView">
+      <property name="minimumSize">
+       <size>
+        <width>450</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="dragMode">
+       <enum>QGraphicsView::RubberBandDrag</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="MyListWidget" name="listWidget">
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::DragOnly</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>my_grpah_view</class>
+   <extends>QGraphicsView</extends>
+   <header>./headers/logic_of_fronted/my_grpah_view.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MyListWidget</class>
+   <extends>QListWidget</extends>
+   <header>./headers/logic_of_fronted/mylistwidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
