@@ -32,6 +32,8 @@ set (SOURCE
     ./source/Reverse_fourier_decomposer.cpp
     ./source/Filters/High_pass_filter.cpp
     ./source/Filters/Low_pass_filter.cpp
+    ./source/widget.cpp
+    ./source/form.cpp
     )
 set (HEADERS
     ./headers/mainwindow.h
@@ -48,11 +50,15 @@ set (HEADERS
     ./headers/Forward_fourier_decomposer.h
     ./headers/Filters/High_pass_filter.h
     ./headers/Filters/Low_pass_filter.h
+    ./headers/widget.h
+    ./headers/form.h
     )
 
 set(PROJECT_SOURCES
         mainwindow.ui
         ./source/graph.ui
+        ./source/widget.ui
+        ./source/form.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
