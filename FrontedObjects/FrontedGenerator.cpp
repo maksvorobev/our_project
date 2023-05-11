@@ -1,10 +1,9 @@
 #include "FrontedGenerator.h"
 
 
-FrontedGenerator::FrontedGenerator() : VirualLabel()
+FrontedGenerator::FrontedGenerator(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
 {
     SetAppearance();
-
 }
 
 /*
@@ -45,6 +44,11 @@ void FrontedGenerator::mousePressEvent(QMouseEvent *event)
                     DialogWindow dialog(this);
                     connect(&dialog, &DialogWindow::textEntered, this, [=](QString text) {
                         qDebug() << "Entered text: " << text;
+                        (*myMap)[curr_index]->addOutput((*myMap)[text.toInt()]);
+                        (*myMap)[text.toInt()]->addInput((*myMap)[curr_index]);
+                        qDebug() << "AAAAA" << (*myMap)[curr_index]->getOutput().size();
+
+                       // ownBlock->addOutput(mp[int(text)])
                     });
 
                     // Показываем диалоговое окно

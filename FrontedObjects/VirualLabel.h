@@ -6,12 +6,14 @@
 #include <QDebug>
 #include <QSharedPointer>
 #include <QPainter>
+#include "./headers/block.h"
 
 class VirualLabel: public QLabel
 {
 public:
     static int my_index;
-    VirualLabel(QSharedPointer<QMenu> menu = nullptr);
+    VirualLabel(QSharedPointer<QMenu> menu = nullptr, std::map<int, Block*>* m = nullptr);
+    int getIndex();
 
     QSharedPointer<QMenu> menu;
 protected:
@@ -19,6 +21,7 @@ protected:
     // эта функция общая для все label и она отрисовывает в правом нижне углу число
     void paintEvent(QPaintEvent *event) override;
     virtual void SetAppearance() = 0; // отвечает за внешний вид Label
+    std::map<int, Block*>* myMap;
 
 };
 

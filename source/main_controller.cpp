@@ -8,11 +8,6 @@ Main_Controller::Main_Controller()
 }
 
 
-void Main_Controller::addGenerator(Generator* generator)
-{
-    Generators.push_back(generator);
-}
-
 void Main_Controller::startCircuit()
 {
     QQueue<Block*> queue;
@@ -40,4 +35,9 @@ void Main_Controller::startCircuit()
         }
     }
 
+}
+void Main_Controller::addGenerator(Generator* generator)
+{
+    Generators.push_back(generator);
+    this->startCircuit();
 }

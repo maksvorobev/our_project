@@ -3,6 +3,7 @@
 #include <QPixmap>
 #include <QMenu>
 #include <QLineEdit>
+#include "./headers/main_controller.h"
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -76,4 +77,10 @@ void Widget::ShowWindow() {
 
 
 
+
+
+void Widget::on_pushButton_4_clicked()
+{
+
+}
 

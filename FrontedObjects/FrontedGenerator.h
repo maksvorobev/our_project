@@ -10,11 +10,13 @@
 #include <QString>
 #include <QPainter>
 #include "DialogWindow.h"
+#include "./headers/generator.h"
+
 
 class FrontedGenerator : public VirualLabel{
     Q_OBJECT
 public:
-    explicit FrontedGenerator();
+    explicit FrontedGenerator(std::map<int, Block*>* m);
 
     void mousePressEvent(QMouseEvent *event) override;
 

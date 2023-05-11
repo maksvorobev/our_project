@@ -17,8 +17,13 @@ MoveItem::MoveItem(QGraphicsItem *parent, QSharedPointer<QGraphicsScene> scene, 
     // установили label в QGraphicsProxyWidget
     setWidget(label);
     //setGeometry(label->geometry());
+    myLabel = label;
 
+}
 
+VirualLabel* MoveItem::getLabel()
+{
+    return myLabel;
 }
 
 MoveItem::~MoveItem()

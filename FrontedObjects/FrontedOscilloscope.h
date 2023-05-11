@@ -10,11 +10,13 @@
 #include <QString>
 #include <QPainter>
 #include "DialogWindow.h"
+#include "./headers/oscilloscope.h"
+
 
 class FrontedOscilloscope : public VirualLabel{
     Q_OBJECT
 public:
-    explicit FrontedOscilloscope();
+    explicit FrontedOscilloscope(std::map<int, Block*>* m);
 
     void mousePressEvent(QMouseEvent *event) override;
 

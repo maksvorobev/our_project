@@ -1,10 +1,9 @@
 #include "FrontedOscilloscope.h"
 
 
-FrontedOscilloscope::FrontedOscilloscope() : VirualLabel()
+FrontedOscilloscope::FrontedOscilloscope(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
 {
     SetAppearance();
-
 }
 
 /*
@@ -31,6 +30,7 @@ void FrontedOscilloscope::mousePressEvent(QMouseEvent *event)
 {
     if ((event->buttons() & Qt::LeftButton)) {
         qDebug() << "mousePressEvent";
+        static_cast<Oscilloscope*> ((*myMap)[curr_index])->graphShow();
         this->setCursor(QCursor(Qt::ClosedHandCursor));
     }
     if (event->button() == Qt::RightButton) {
@@ -45,6 +45,9 @@ void FrontedOscilloscope::mousePressEvent(QMouseEvent *event)
                     DialogWindow dialog(this);
                     connect(&dialog, &DialogWindow::textEntered, this, [=](QString text) {
                         qDebug() << "Entered text: " << text;
+                        (*myMap)[curr_index]->addOutput((*myMap)[text.toInt()]);
+                        (*myMap)[text.toInt()]->addInput((*myMap)[curr_index]);
+                        qDebug() << "AAAAA" << (*myMap)[curr_index]->getOutput().size();
                     });
 
                     // Показываем диалоговое окно

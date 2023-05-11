@@ -2,11 +2,15 @@
 
 
 int VirualLabel::my_index = 0;
-VirualLabel::VirualLabel(QSharedPointer<QMenu> menu): menu(menu){
+VirualLabel::VirualLabel(QSharedPointer<QMenu> menu, std::map<int, Block*>* m): menu(menu){
     ++VirualLabel::my_index;
-
+    myMap = m;
 }
 
+int VirualLabel::getIndex()
+{
+    return curr_index;
+}
 
 void VirualLabel::paintEvent(QPaintEvent *event){
     QLabel::paintEvent(event);

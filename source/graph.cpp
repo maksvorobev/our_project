@@ -1,5 +1,6 @@
 #include "../headers/graph.h"
 #include "ui_graph.h"
+#include <algorithm>
 
 Graph::Graph(QWidget *parent) :
     QWidget(parent),
@@ -18,9 +19,10 @@ void Graph::makePlot(Signal* signal)
     double widgh = N * h;
     double xBegin = 0;
     double xEnd = widgh;
-
+    double max_elem = *max_element(U.begin(), U.end());
+    double min_elem = *min_element(U.begin(), U.end());
     ui->customPlot->xAxis->setRange(-1, widgh*3 + h);
-    ui->customPlot->yAxis->setRange(-1, 1);
+    ui->customPlot->yAxis->setRange(-std::max(abs(min_elem), abs(max_elem)),std::max(abs(min_elem), abs(max_elem)));
 
     for (int i = 0; i < 3*N; i++){
         double X = h * i;
@@ -30,6 +32,9 @@ void Graph::makePlot(Signal* signal)
     ui->customPlot->addGraph();
     ui->customPlot->graph(0)->addData(x,y);
     ui->customPlot->replot();
+
+    ui->customPlot->yAxis->setLabel("Amplitude");
+    ui->customPlot->xAxis->setLabel("Time(mcs)");
 }
 
 Graph::~Graph()

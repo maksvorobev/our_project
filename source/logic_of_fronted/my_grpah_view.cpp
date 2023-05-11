@@ -15,15 +15,22 @@ void my_grpah_view::dropEvent(QDropEvent *event)
    if (!t.isEmpty ())
    {
         if (t == "Oscilloscope"){
-            FrontedOscilloscope* oscilloscope = new FrontedOscilloscope;
+            FrontedOscilloscope* oscilloscope = new FrontedOscilloscope(&myMap);
             MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
+            Oscilloscope* BackendOscilloscope = new Oscilloscope;
+            myMap[item->getLabel()->getIndex()] = BackendOscilloscope;
             item->setPos(event->pos());
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
             scene->addItem(item);
         }
         if (t == "Generator"){
-            FrontedGenerator* oscilloscope = new FrontedGenerator;
+            FrontedGenerator* oscilloscope = new FrontedGenerator(&myMap);
             MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
+            vector<double> U = {0, 1, 2, 3, 4, 3, 2, 1, 0};
+            Signal* s = new Signal(U, 1, 9);
+            Generator* BackendGenerator = new Generator(s);
+            myController.addGenerator(BackendGenerator);
+            myMap[item->getLabel()->getIndex()] = BackendGenerator;
             item->setPos(event->pos());
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
             scene->addItem(item);
@@ -37,6 +44,7 @@ void my_grpah_view::dropEvent(QDropEvent *event)
         //item->show();
         */
         }
+
 
 /*
       auto label = new QLabel (t, this);
@@ -54,7 +62,9 @@ void my_grpah_view::dropEvent(QDropEvent *event)
       //setStyleSheet ("background-color: rgba(255, 0, 0, 1);");
        setStyleSheet ("background-color: white;");
    }
-
+   //for (auto [x, y]: myMap->getMap()){
+       //qDebug() << x << "   " << y;
+   //}
    event->accept ();
 }
 
@@ -81,7 +91,6 @@ void my_grpah_view::dragMoveEvent(QDragMoveEvent *event)
 
 my_grpah_view::my_grpah_view()
 {
-
 }
 
 my_grpah_view::my_grpah_view(QWidget *parent): QGraphicsView(parent)

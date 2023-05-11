@@ -5,6 +5,11 @@
 #include <QGraphicsProxyWidget>
 #include <QSharedPointer>
 #include "../../FrontedObjects/FrontedGenerator.h"
+#include "../../FrontedObjects/FrontedOscilloscope.h"
+#include "./headers/generator.h"
+#include "./headers/oscilloscope.h"
+#include <map>
+#include "./headers/main_controller.h"
 
 
 class QDropEvent;
@@ -25,6 +30,8 @@ protected:
    void dragEnterEvent(QDragEnterEvent *event) override;
    void dragLeaveEvent (QDragLeaveEvent *event) override;
    void dragMoveEvent(QDragMoveEvent *event) override;
+   std::map<int, Block*> myMap;
+   Main_Controller myController;
 
 
 

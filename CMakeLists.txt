@@ -43,7 +43,7 @@ set (SOURCE
     FrontedObjects/VirualLabel.cpp
     FrontedObjects/DialogWindow.cpp
     FrontedObjects/FrontedGenerator.cpp
-
+    headers/logic_of_fronted/graphmap.cpp
 
 
 
@@ -78,6 +78,7 @@ set (HEADERS
     FrontedObjects/VirualLabel.h
     FrontedObjects/DialogWindow.h
     FrontedObjects/FrontedGenerator.h
+    headers/logic_of_fronted/graphmap.h
 
 
 

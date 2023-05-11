@@ -11,7 +11,6 @@
 #include <QLabel>
 #include <QGraphicsProxyWidget>
 #include <QGraphicsScene>
-#include "./FrontedObjects/FrontedOscilloscope.h"
 #include <QMenu>
 #include <QMouseEvent>
 #include <QSharedPointer>
@@ -21,6 +20,7 @@ class MoveItem : public QGraphicsProxyWidget
     Q_OBJECT
 public:
     MoveItem(QGraphicsItem *parent, QSharedPointer<QGraphicsScene> scene, VirualLabel* label);
+    VirualLabel* getLabel();
     ~MoveItem();
 
 signals:
@@ -30,6 +30,7 @@ private:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
+    VirualLabel* myLabel;
 
 
     QPointF cursor_offset; // смещение курсора
