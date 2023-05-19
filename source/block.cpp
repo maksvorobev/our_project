@@ -5,9 +5,14 @@ Block::Block(QWidget *parent): QWidget(parent)
 
 }
 
+<<<<<<< Updated upstream
 const std::vector<Block*>& Block::getOutput() {return output;}
+=======
 
-const std::vector<Block*>& Block::getInput() {return input;}
+std::vector<Block*> Block::getOutput() {return output;}
+>>>>>>> Stashed changes
+
+std::vector<Block*> Block::getInput() {return input;}
 
 bool Block::ready() {return true;}
 
@@ -27,10 +32,7 @@ bool Block::addInput(Block* block)
 
 void Block::set_in_input_Signal(Signal* signal) {}
 
-Signal* Block::getSignal()
-{
-
-}
+Signal* Block::getSignal() {}
 
 
 

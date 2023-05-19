@@ -10,7 +10,7 @@ class Oscilloscope : public Block
     Q_OBJECT
 public:
     Oscilloscope();
-    void makePlot();
+
     void graphShow();
     void work() override;
     void set_in_input_Signal(Signal* signal) override;
@@ -24,6 +24,6 @@ public:
 
 private:
     Graph graph;
-
+    void makePlot();
 };
 

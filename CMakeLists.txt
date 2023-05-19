@@ -23,15 +23,44 @@ set (SOURCE
     ./source/Signal.cpp
     ./qcustomplot.cpp
     ./source/graph.cpp
+ #   ./source/cambiner.cpp
     ./source/oscilloscope.cpp
     ./source/main_controller.cpp
     ./source/block.cpp
     ./source/generator.cpp
+<<<<<<< Updated upstream
    # ./source/block_low_pass_filter.cpp
   #  ./source/Forward_fourier_decomposer.cpp
   #  ./source/Reverse_fourier_decomposer.cpp
 #    ./source/High_pass_filter.cpp
 #    ./source/Low_pass_filter.cpp
+=======
+    ./source/block_low_pass_filter.cpp
+    ./source/Forward_fourier_decomposer.cpp
+    ./source/Reverse_fourier_decomposer.cpp
+    ./source/Filters/High_pass_filter.cpp
+    ./source/Filters/Low_pass_filter.cpp
+    ./source/widget.cpp
+    ./source/form.cpp
+#    ./source/transformer.cpp
+    source/logic_of_fronted/mylistwidget.cpp
+    source/logic_of_fronted/CustomFrame.cpp
+    source/logic_of_fronted/MoveItem.cpp
+    source/logic_of_fronted/my_grpah_view.cpp
+
+    ./FrontedObjects/FrontedOscilloscope.cpp
+    FrontedObjects/VirualLabel.cpp
+    FrontedObjects/DialogWindow.cpp
+    FrontedObjects/FrontedGenerator.cpp
+    headers/logic_of_fronted/graphmap.cpp
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
     )
 set (HEADERS
     ./headers/mainwindow.h
@@ -40,6 +69,9 @@ set (HEADERS
     ./headers/Signal.h
     ./qcustomplot.h
     ./headers/graph.h
+#    ./headers/transformer.h
+ #   ./headers/spline.h
+ #   ./headers/cambiner.h
     ./headers/oscilloscope.h
     ./headers/main_controller.h
     ./headers/block.h
