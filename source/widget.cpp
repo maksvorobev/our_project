@@ -3,7 +3,7 @@
 #include <QPixmap>
 #include <QMenu>
 #include <QLineEdit>
-#include "./headers/main_controller.h"
+
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -12,7 +12,7 @@ Widget::Widget(QWidget *parent)
     ui->setupUi(this);
 
 
-
+    myController = new Main_Controller;
     QMenu* menu1 = new QMenu(this);
 
     QAction* act1 = new QAction("фильтр 1");
@@ -51,6 +51,8 @@ Widget::Widget(QWidget *parent)
     menu3->addAction(tr("И еще чтото (помощь)"));
     ui->pushButton_9->setMenu(menu3);
 
+    ui->graphicsView->set_main_controller(myController);
+
 }
 
 
@@ -73,14 +75,8 @@ void Widget::ShowWindow() {
 }
 
 
-
-
-
-
-
-
 void Widget::on_pushButton_4_clicked()
 {
-
+    myController->startCircuit();
 }
 

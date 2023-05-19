@@ -29,6 +29,8 @@ public:
 
     virtual ~Block();
 
+    Signal *getOutput_signal() const;
+
 protected:
     std::vector<Signal*> input_signals;
     Signal* output_signal;

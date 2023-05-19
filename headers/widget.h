@@ -6,6 +6,7 @@
 #include <QPushButton>
 #include <QPixmap>
 #include "./headers/form.h"
+#include "./headers/main_controller.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -30,5 +31,6 @@ private slots:
 private:
     Ui::Widget *ui;
     Form form;
+    Main_Controller* myController;
 };
 #endif // WIDGET_H

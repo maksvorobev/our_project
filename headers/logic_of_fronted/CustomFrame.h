@@ -6,9 +6,9 @@
 #include <QGraphicsItem>
 #include "MoveItem.h"
 
-class QDropEvent;
-class QDragEnterEvent;
-class QDragLeaveEvent;
+class QDropEvent; //?????
+class QDragEnterEvent; //?????
+class QDragLeaveEvent; //????
 
 class CustomFrame : public QFrame
 {
