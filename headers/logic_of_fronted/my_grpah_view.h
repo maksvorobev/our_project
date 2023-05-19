@@ -22,6 +22,7 @@ class my_grpah_view: public QGraphicsView{
 public:
     my_grpah_view();
     explicit my_grpah_view(QWidget *parent = nullptr);
+    void set_main_controller(Main_Controller* controller);
 
 
 protected:
@@ -31,7 +32,7 @@ protected:
    void dragLeaveEvent (QDragLeaveEvent *event) override;
    void dragMoveEvent(QDragMoveEvent *event) override;
    std::map<int, Block*> myMap;
-   Main_Controller myController;
+   Main_Controller* myController;
 
 
 
