@@ -1,6 +1,6 @@
 #pragma once
 #include "Signal.h"
-#include "block.h"
+#include "./headers/block.h"
 #include <vector>
 #include <string>
 #include <fstream>

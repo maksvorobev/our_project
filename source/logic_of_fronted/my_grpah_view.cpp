@@ -35,6 +35,18 @@ void my_grpah_view::dropEvent(QDropEvent *event)
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
             scene->addItem(item);
         }
+        if (t == "HighPassFilter"){
+            FrontedHighPassFilter* oscilloscope = new FrontedHighPassFilter(&myMap);
+            MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
+            vector<double> U = {0, 1, 2, 3, 4, 3, 2, 1, 0};
+            Signal* s = new Signal(U, 1, 9);
+            block_low_pass_filter* low_filter = new block_low_pass_filter;
+            //myController.addGenerator(low_filter);
+            myMap[item->getLabel()->getIndex()] = low_filter;
+            item->setPos(event->pos());
+            qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
+            scene->addItem(item);
+        }
         else {
             /*
         VirualLabel* lb = new QLabel;

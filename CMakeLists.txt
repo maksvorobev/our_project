@@ -44,6 +44,7 @@ set (SOURCE
     FrontedObjects/DialogWindow.cpp
     FrontedObjects/FrontedGenerator.cpp
     headers/logic_of_fronted/graphmap.cpp
+    FrontedObjects/FrontedHighPassFilter.cpp
 
 
 
@@ -79,6 +80,7 @@ set (HEADERS
     FrontedObjects/DialogWindow.h
     FrontedObjects/FrontedGenerator.h
     headers/logic_of_fronted/graphmap.h
+    FrontedObjects/FrontedHighPassFilter.h
 
 
 

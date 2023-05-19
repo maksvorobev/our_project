@@ -7,6 +7,7 @@
 #include <QSharedPointer>
 #include <QPainter>
 #include "./headers/block.h"
+//#include "./headers/block_low_pass_filter.h"
 
 class VirualLabel: public QLabel
 {

@@ -31,3 +31,9 @@ bool block_low_pass_filter::ready(){
     }
     return true;
 }
+
+void block_low_pass_filter::set_cutoff_frequency(double frequency)
+{
+    this->cutoff_frequency = frequency;
+    qDebug() << frequency;
+}
