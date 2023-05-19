@@ -38,8 +38,6 @@ void my_grpah_view::dropEvent(QDropEvent *event)
         if (t == "HighPassFilter"){
             FrontedHighPassFilter* oscilloscope = new FrontedHighPassFilter(&myMap);
             MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
-            vector<double> U = {0, 1, 2, 3, 4, 3, 2, 1, 0};
-            Signal* s = new Signal(U, 1, 9);
             block_low_pass_filter* low_filter = new block_low_pass_filter;
             //myController.addGenerator(low_filter);
             myMap[item->getLabel()->getIndex()] = low_filter;

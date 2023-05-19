@@ -22,6 +22,7 @@ void block_low_pass_filter::work()
     if (ready()){
         Low_pass_filter filter(*input_signals[0], cutoff_frequency);
         output_signal =  new Signal(filter.Get_Signal());
+        qDebug() << "filter work " << cutoff_frequency;
     }
 }
 
