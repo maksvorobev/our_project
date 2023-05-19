@@ -19,10 +19,10 @@ Signal::Signal(string path) {
 			tm = atof(tmpstr.c_str());
 			tmpstr = "";
 			if (i == 1) {
-				this->T = tm;
+				this->dt = tm;
 			}
 			if (i == 2) {
-				this->dt = tm;
+				this->T = tm;
 			}
 			if (i > 2) {
 				U.push_back(tm);

@@ -81,27 +81,16 @@ Signal Cambiner::CambineSignals() {
 
 
 	if ((input_signal_1.getdt() != input_signal_2.getdt()) and (input_signal_1.getT() == input_signal_2.getT())) {
+		double T = input_signal_1.getT();
 		double dt = std::max(input_signal_1.getdt(), input_signal_2.getdt());
 		double dt_min = std::min(input_signal_1.getdt(), input_signal_2.getdt());
 		vector<double> dt_x;
 		double t = 0;
-		double T = input_signal_1.getT();
-		vector<double> extended_signal1 = input_signal_1.getU();
-		vector<double> extended_signal2 = input_signal_2.getU();
 
 		Signal customized_signal;
 		Signal primal_signal;
 
-		/*if (T / input_signal_1.getdt() > T / input_signal_2.getdt()) {
-			customized_signal = Signal(extended_signal2, input_signal_2.getdt(), T);
-			primal_signal = Signal(extended_signal1, input_signal_1.getdt(), T);
-		}
-		else {
-			customized_signal = Signal(extended_signal1, input_signal_1.getdt(), T);
-			primal_signal = Signal(extended_signal2, input_signal_2.getdt(), T);
-		}*/
-
-		vector<Signal> signals = FillSignals(extended_signal1, extended_signal2, T, input_signal_1.getdt(), input_signal_2.getdt());
+		vector<Signal> signals = FillSignals(input_signal_1.getU(), input_signal_2.getU(), T, input_signal_1.getdt(), input_signal_2.getdt());
 		primal_signal = signals[0];
 		customized_signal = signals[1];
 
@@ -132,7 +121,7 @@ Signal Cambiner::CambineSignals() {
 		extended_signal1 = ExtendSignal(input_signal_1, T);
 
 		vector<double> extended_signal2;
-		extended_signal1 = ExtendSignal(input_signal_1, T);
+		extended_signal2 = ExtendSignal(input_signal_2, T);
 
 		Signal signal1(extended_signal1, input_signal_1.getdt(), T);
 		Signal signal2(extended_signal2, input_signal_2.getdt(), T);
@@ -152,15 +141,6 @@ Signal Cambiner::CambineSignals() {
 
 		Signal customized_signal;
 		Signal primal_signal;
-
-		/*if (T / input_signal_1.getdt() > T / input_signal_2.getdt()) {
-			customized_signal = Signal (extended_signal2, input_signal_2.getdt(), T);
-			primal_signal = Signal (extended_signal1, input_signal_1.getdt(), T);
-		}
-		else {
-			customized_signal = Signal(extended_signal1, input_signal_1.getdt(), T);
-			primal_signal = Signal(extended_signal2, input_signal_2.getdt(), T);
-		}*/
 
 		vector<Signal> signals = FillSignals(extended_signal1, extended_signal2, T, input_signal_1.getdt(), input_signal_2.getdt());
 		primal_signal = signals[0];
