@@ -35,6 +35,10 @@ set (SOURCE
     ./source/widget.cpp
     ./source/form.cpp
 
+    #./source/transformer.cpp
+    #./source/spline.cpp
+    #./source/cambiner.cpp
+
     source/logic_of_fronted/mylistwidget.cpp
     source/logic_of_fronted/CustomFrame.cpp
     source/logic_of_fronted/MoveItem.cpp
@@ -72,6 +76,10 @@ set (HEADERS
     ./headers/Filters/Low_pass_filter.h
     ./headers/widget.h
     ./headers/form.h
+
+    #./headers/transformer.h
+    #./headers/spline.h
+    #./headers/cambiner.h
 
     headers/logic_of_fronted/mylistwidget.h
     headers/logic_of_fronted/CustomFrame.h
