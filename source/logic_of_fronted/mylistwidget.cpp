@@ -7,7 +7,7 @@ MyListWidget::MyListWidget(QWidget *parent): QListWidget(parent){
     this->addItem("Generator");
     this->addItem("HighPassFilter");
     this->addItem("LowPassFilter");
-    this->addItem("4");
+    this->addItem("Combiner");
 
 }
 
