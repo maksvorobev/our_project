@@ -1,6 +1,4 @@
-//#pragma once
-#ifndef wfwf
-#define wfwf
+#pragma once
 
 #include "VirualLabel.h"
 #include <QLabel>
@@ -14,13 +12,13 @@
 #include <QPainter>
 #include "DialogWindow.h"
 //#include "./headers/generator.h"
-#include "./headers/block_high_pass_filter.h"
+#include "./headers/block_low_pass_filter.h"
 
 
-class FrontedHighPassFilter : public VirualLabel{
+class FrontedLowPassFilter : public VirualLabel{
     Q_OBJECT
 public:
-    explicit FrontedHighPassFilter(std::map<int, Block*>* m);
+    explicit FrontedLowPassFilter(std::map<int, Block*>* m);
 
     void mousePressEvent(QMouseEvent *event) override;
 
@@ -31,5 +29,3 @@ protected:
     //void paintEvent(QPaintEvent *event) override;
 
 };
-
-#endif // VIRUALLABEL_H

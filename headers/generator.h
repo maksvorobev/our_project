@@ -2,7 +2,7 @@
 #include "Signal.h"
 #include "./headers/block.h"
 #include <vector>
-#include <string>
+#include <QString>
 #include <fstream>
 #include <iostream>
 
@@ -14,7 +14,7 @@ class Generator: public Block {
 public:
     Generator(Signal* signal);
     Generator();
-    Generator(string path);
+    Generator(QString path);
     void setSignal(Signal* signal);
     void work() override;
     Signal* getSignal() override;

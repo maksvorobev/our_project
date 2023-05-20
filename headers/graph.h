@@ -13,6 +13,7 @@ class Graph : public QWidget
 
 public:
     explicit Graph(QWidget *parent = nullptr);
+
     void makePlot(Signal* signal);
 
     ~Graph();

@@ -1,7 +1,7 @@
-#include "FrontedHighPassFilter.h"
+#include "FrontedLowPassFilter.h"
 
 
-FrontedHighPassFilter::FrontedHighPassFilter(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
+FrontedLowPassFilter::FrontedLowPassFilter(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
 {
     SetAppearance();
 }
@@ -26,7 +26,7 @@ void FrontedOscilloscope::mousePressEvent(QMouseEvent *event)
 }
 */
 
-void FrontedHighPassFilter::mousePressEvent(QMouseEvent *event)
+void FrontedLowPassFilter::mousePressEvent(QMouseEvent *event)
 {
     if ((event->buttons() & Qt::LeftButton)) {
         qDebug() << "mousePressEvent";
@@ -84,11 +84,11 @@ void FrontedHighPassFilter::mousePressEvent(QMouseEvent *event)
     return;
 }
 
-void FrontedHighPassFilter::SetAppearance()
+void FrontedLowPassFilter::SetAppearance()
 {
     curr_index = VirualLabel::my_index;
     menu.reset(new QMenu(this));
-    setText(QString("HighPassFilter") + QString::number(curr_index) + QString("\n")
+    setText(QString("LowPassFilter") + QString::number(curr_index) + QString("\n")
             + QString("frequency = ") + QString("by-default"));
     //setText(QString("frequency = "));
     setAlignment(Qt::AlignCenter);// выравнивание текста по центру
@@ -109,13 +109,13 @@ void FrontedHighPassFilter::SetAppearance()
     qDebug() << menu->actions()[0]->text();
 }
 
-void FrontedHighPassFilter::PrintFrequencyInQLabel(double frequency)
+void FrontedLowPassFilter::PrintFrequencyInQLabel(double frequency)
 {
     setText(QString("HighPassFilter") + QString::number(curr_index) + QString("\n")
             + QString("frequency = ") + QString::number(frequency));
     //setText(QString("frequency = "));
     setAlignment(Qt::AlignCenter);// выравнивание текста по центру
-    static_cast<block_high_pass_filter*>((*myMap)[curr_index])->set_cutoff_frequency(frequency);
+    static_cast<block_low_pass_filter*>((*myMap)[curr_index])->set_cutoff_frequency(frequency);
 }
 
 
@@ -142,5 +142,3 @@ void FrontedOscilloscope::paintEvent(QPaintEvent *event)
             painter.drawText(rectangle,Qt::AlignCenter,  text);
 }
 */
-
-

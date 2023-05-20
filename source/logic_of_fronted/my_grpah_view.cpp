@@ -10,7 +10,7 @@
 void my_grpah_view::dropEvent(QDropEvent *event)
 {
     qDebug() << "drop";
-   auto t = event->mimeData()->data("application/x-item");
+   auto t = event->mimeData()->data("application/x-item"); //???????
 
    if (!t.isEmpty ())
    {
@@ -29,7 +29,7 @@ void my_grpah_view::dropEvent(QDropEvent *event)
             vector<double> U = {0, 1, 2, 3, 4, 3, 2, 1, 0};
             Signal* s = new Signal(U, 1, 9);
             Generator* BackendGenerator = new Generator(s);
-            myController.addGenerator(BackendGenerator);
+            myController->addGenerator(BackendGenerator);
             myMap[item->getLabel()->getIndex()] = BackendGenerator;
             item->setPos(event->pos());
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
@@ -38,8 +38,16 @@ void my_grpah_view::dropEvent(QDropEvent *event)
         if (t == "HighPassFilter"){
             FrontedHighPassFilter* oscilloscope = new FrontedHighPassFilter(&myMap);
             MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
-            vector<double> U = {0, 1, 2, 3, 4, 3, 2, 1, 0};
-            Signal* s = new Signal(U, 1, 9);
+            block_high_pass_filter* high_filter = new block_high_pass_filter;
+            //myController.addGenerator(low_filter);
+            myMap[item->getLabel()->getIndex()] = high_filter;
+            item->setPos(event->pos());
+            qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
+            scene->addItem(item);
+        }
+        if (t == "LowPassFilter"){
+            FrontedLowPassFilter* oscilloscope = new FrontedLowPassFilter(&myMap);
+            MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
             block_low_pass_filter* low_filter = new block_low_pass_filter;
             //myController.addGenerator(low_filter);
             myMap[item->getLabel()->getIndex()] = low_filter;
@@ -127,6 +135,11 @@ my_grpah_view::my_grpah_view(QWidget *parent): QGraphicsView(parent)
     scene->setSceneRect(0,0,1000,1000); // Устанавливаем размер сцены0, 0, 1000, 1000); // Устанавливаем размер сцены
 
 
+}
+
+void my_grpah_view::set_main_controller(Main_Controller *controller)
+{
+    myController = controller;
 }
 
 

@@ -5,10 +5,9 @@ MyListWidget::MyListWidget(QWidget *parent): QListWidget(parent){
 
     this->addItem("Oscilloscope");
     this->addItem("Generator");
-    this->addItem("");
     this->addItem("HighPassFilter");
-
-
+    this->addItem("LowPassFilter");
+    this->addItem("4");
 
 }
 

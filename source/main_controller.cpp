@@ -39,5 +39,4 @@ void Main_Controller::startCircuit()
 void Main_Controller::addGenerator(Generator* generator)
 {
     Generators.push_back(generator);
-    this->startCircuit();
 }

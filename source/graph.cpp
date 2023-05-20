@@ -9,8 +9,10 @@ Graph::Graph(QWidget *parent) :
     ui->setupUi(this);
 }
 
+
 void Graph::makePlot(Signal* signal)
 {
+    ui->customPlot->clearGraphs();
     QVector<double> x,y;
     std::vector<double> U = signal->getU();
     double h = signal->getdt();

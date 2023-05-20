@@ -35,6 +35,10 @@ set (SOURCE
     ./source/widget.cpp
     ./source/form.cpp
 
+    #./source/transformer.cpp
+    #./source/spline.cpp
+    #./source/cambiner.cpp
+
     source/logic_of_fronted/mylistwidget.cpp
     source/logic_of_fronted/CustomFrame.cpp
     source/logic_of_fronted/MoveItem.cpp
@@ -45,7 +49,8 @@ set (SOURCE
     FrontedObjects/FrontedGenerator.cpp
     headers/logic_of_fronted/graphmap.cpp
     FrontedObjects/FrontedHighPassFilter.cpp
-
+    FrontedObjects/FrontedLowPassFilter.cpp
+    source/block_high_pass_filter.cpp
 
 
 
@@ -71,6 +76,10 @@ set (HEADERS
     ./headers/widget.h
     ./headers/form.h
 
+    #./headers/transformer.h
+    #./headers/spline.h
+    #./headers/cambiner.h
+
     headers/logic_of_fronted/mylistwidget.h
     headers/logic_of_fronted/CustomFrame.h
     headers/logic_of_fronted/MoveItem.h
@@ -81,6 +90,8 @@ set (HEADERS
     FrontedObjects/FrontedGenerator.h
     headers/logic_of_fronted/graphmap.h
     FrontedObjects/FrontedHighPassFilter.h
+    FrontedObjects/FrontedLowPassFilter.h
+    headers/block_high_pass_filter.h
 
 
 

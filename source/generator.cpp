@@ -7,7 +7,7 @@ Generator::Generator(Signal* signal)
 
 Generator::Generator(){}
 
-Generator::Generator(string path)
+Generator::Generator(QString path)
 {
     Signal* signal = new Signal(path);
     output_signal = signal;
