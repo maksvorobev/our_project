@@ -12,6 +12,8 @@
 #include "./headers/main_controller.h"
 #include "../../FrontedObjects/FrontedHighPassFilter.h"
 #include "./headers/block_low_pass_filter.h"
+#include "../../FrontedObjects/FrontedLowPassFilter.h"
+#include "./headers/block_high_pass_filter.h"
 
 
 class QDropEvent;

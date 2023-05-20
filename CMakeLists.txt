@@ -45,7 +45,8 @@ set (SOURCE
     FrontedObjects/FrontedGenerator.cpp
     headers/logic_of_fronted/graphmap.cpp
     FrontedObjects/FrontedHighPassFilter.cpp
-
+    FrontedObjects/FrontedLowPassFilter.cpp
+    source/block_high_pass_filter.cpp
 
 
 
@@ -81,6 +82,8 @@ set (HEADERS
     FrontedObjects/FrontedGenerator.h
     headers/logic_of_fronted/graphmap.h
     FrontedObjects/FrontedHighPassFilter.h
+    FrontedObjects/FrontedLowPassFilter.h
+    headers/block_high_pass_filter.h
 
 
 
