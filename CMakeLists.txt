@@ -34,9 +34,9 @@ set (SOURCE
     ./source/Filters/Low_pass_filter.cpp
     ./source/widget.cpp
     ./source/form.cpp
+    ./source/harmony_oscilloscope.cpp
 
-    #./source/transformer.cpp
-    #./source/spline.cpp
+    ./source/transformer.cpp
     #./source/cambiner.cpp
 
     source/logic_of_fronted/mylistwidget.cpp
@@ -74,8 +74,9 @@ set (HEADERS
     ./headers/Filters/Low_pass_filter.h
     ./headers/widget.h
     ./headers/form.h
+    ./headers/harmony_oscilloscope.h
 
-    #./headers/transformer.h
+    ./headers/transformer.h
     #./headers/spline.h
     #./headers/cambiner.h
 
