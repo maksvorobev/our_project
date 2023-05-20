@@ -38,6 +38,16 @@ void my_grpah_view::dropEvent(QDropEvent *event)
         if (t == "HighPassFilter"){
             FrontedHighPassFilter* oscilloscope = new FrontedHighPassFilter(&myMap);
             MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
+            block_high_pass_filter* high_filter = new block_high_pass_filter;
+            //myController.addGenerator(low_filter);
+            myMap[item->getLabel()->getIndex()] = high_filter;
+            item->setPos(event->pos());
+            qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
+            scene->addItem(item);
+        }
+        if (t == "LowPassFilter"){
+            FrontedLowPassFilter* oscilloscope = new FrontedLowPassFilter(&myMap);
+            MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
             block_low_pass_filter* low_filter = new block_low_pass_filter;
             //myController.addGenerator(low_filter);
             myMap[item->getLabel()->getIndex()] = low_filter;
