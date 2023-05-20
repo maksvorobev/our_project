@@ -47,6 +47,7 @@ set (SOURCE
     FrontedObjects/FrontedHighPassFilter.cpp
     FrontedObjects/FrontedLowPassFilter.cpp
     source/block_high_pass_filter.cpp
+    source/Cambiner.cpp
 
 
 
@@ -84,8 +85,8 @@ set (HEADERS
     FrontedObjects/FrontedHighPassFilter.h
     FrontedObjects/FrontedLowPassFilter.h
     headers/block_high_pass_filter.h
-
-
+    headers/Cambiner.h
+    headers/Spline.h
 
 
 
