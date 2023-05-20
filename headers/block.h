@@ -4,6 +4,9 @@
 #include <QWidget>
 #include <vector>
 #include "Signal.h"
+
+
+
 class Block: public QWidget
 {
     Q_OBJECT
@@ -17,16 +20,9 @@ public:
     bool addInput(Block* block);
 
     virtual void set_in_input_Signal(Signal* signal);
-
     virtual Signal* getSignal();
-
     bool ready();
-
     virtual void work();
-
-
-
-
     virtual ~Block();
 
 protected:

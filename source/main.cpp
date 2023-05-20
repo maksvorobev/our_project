@@ -5,6 +5,7 @@
 #include <QFile>
 #include <QDebug>
 #include <QTextStream>
+#include <./headers/harmony_oscilloscope.h>
 
 int main(int argc, char *argv[])
 {

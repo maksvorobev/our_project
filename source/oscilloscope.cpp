@@ -1,9 +1,6 @@
 #include "../headers/oscilloscope.h"
 
-Oscilloscope::Oscilloscope()
-{
-
-}
+Oscilloscope::Oscilloscope() {}
 
 
 void Oscilloscope::makePlot(){graph.makePlot(input_signals[0]);}
