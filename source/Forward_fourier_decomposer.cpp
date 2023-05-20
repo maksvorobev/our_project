@@ -2,7 +2,7 @@
 #include <utility>
 
 
-Forward_fourier_decomposer::Forward_fourier_decomposer(const Signal& signal): signal(signal), sampling_frequency(1.0/(signal.getdt())), N(signal.getU().size()){
+Forward_fourier_decomposer::Forward_fourier_decomposer(Signal* signal): signal(signal), sampling_frequency(1.0/(signal->getdt())), N(signal->getU().size()){
     X_m_m.resize(N);
     X_m_r.resize(N);
     X_m_im.resize(N);
@@ -11,7 +11,7 @@ Forward_fourier_decomposer::Forward_fourier_decomposer(const Signal& signal): si
 
 
 void Forward_fourier_decomposer::Decompose(){
-    vector<double> x_n = signal.getU();
+    vector<double> x_n = signal->getU();
     std::cout << '\n';
     for (double m = 0.0; m < N; ++m){
         double my_real = 0;
@@ -20,7 +20,7 @@ void Forward_fourier_decomposer::Decompose(){
             double theta  = -m*(2.0*M_PI)*(n/N);
             my_real += x_n[n]*cos(theta);
             my_imag += x_n[n]*sin(theta);
-            
+
         }
         X_m_m[m] = pow(my_real*my_real + my_imag*my_imag, 0.5)/N;
         X_m_r[m] = my_real/N;

@@ -1,20 +1,21 @@
 #pragma once
 #include <vector>
-#include <string>
+#include <QString>
+
 using std::vector;
 
 
 class Signal{
 private:
-    const vector<double> U;
-    const double dt;
-    const double T;
+    vector<double> U;
+    double dt;
+    double T;
 public:
-    Signal(const vector<double>& U,double dt, double T);
+    Signal(const vector<double> U,double dt, double T);
     Signal();
-    const vector<double>& getU() const;
-    double getdt() const;
-    double getT() const ;
-    Signal(std::string path);
+    vector<double> getU();
+    double getdt();
+    double getT();
+    Signal(QString path);
 
 };
