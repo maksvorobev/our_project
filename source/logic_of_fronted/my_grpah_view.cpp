@@ -10,7 +10,7 @@
 void my_grpah_view::dropEvent(QDropEvent *event)
 {
     qDebug() << "drop";
-   auto t = event->mimeData()->data("application/x-item"); //???????
+   auto t = event->mimeData()->data("application/x-item");
 
    if (!t.isEmpty ())
    {
@@ -62,52 +62,22 @@ void my_grpah_view::dropEvent(QDropEvent *event)
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
             scene->addItem(item);
         }
-        else {
-            /*
-        VirualLabel* lb = new QLabel;
-        MoveItem *item = new MoveItem(nullptr, scene, lb);
-        item->setPos(event->pos());
-        scene->addItem(item);
-        //item->show();
-        */
-        }
 
-
-/*
-      auto label = new QLabel (t, this);
-      label->setFixedSize(100, 50);
-      label->setStyleSheet("background-color: green;");
-      //label->move(event->pos());
-      scene->addItem(label);
-      label->show();
-*/
-
-
-
-
-
-      //setStyleSheet ("background-color: rgba(255, 0, 0, 1);");
        setStyleSheet ("background-color: white;");
    }
-   //for (auto [x, y]: myMap->getMap()){
-       //qDebug() << x << "   " << y;
-   //}
+
    event->accept ();
 }
 
 void my_grpah_view::dragEnterEvent(QDragEnterEvent *event)
 {
    event->accept ();
-
-   //setStyleSheet ("background-color: rgba(0, 0, 0, 0.5);");
    setStyleSheet ("background-color: white;");
 }
 
 void my_grpah_view::dragLeaveEvent(QDragLeaveEvent *event)
 {
    event->accept ();
-
-   //setStyleSheet ("background-color: rgba(0, 0, 0, 1);");
    setStyleSheet ("background-color: white;");
 }
 
@@ -116,14 +86,11 @@ void my_grpah_view::dragMoveEvent(QDragMoveEvent *event)
     event->acceptProposedAction();
 }
 
-my_grpah_view::my_grpah_view()
-{
-}
+my_grpah_view::my_grpah_view() {}
 
 my_grpah_view::my_grpah_view(QWidget *parent): QGraphicsView(parent)
 {
     setAcceptDrops(true);
-    //setStyleSheet ("background-color: rgba(255, 0, 0, 1);");
     setStyleSheet ("background-color: white;");
 
 
@@ -131,8 +98,6 @@ my_grpah_view::my_grpah_view(QWidget *parent): QGraphicsView(parent)
 
     scene.reset(new QGraphicsScene(this));   // Инициализируем графическую сцену
     scene->setItemIndexMethod(QGraphicsScene::NoIndex); // настраиваем индексацию элементов
-
-    //this->resize(600,600);  // Устанавливаем размер graphicsView
 
     this->setScene(scene.get());  // Устанавливаем графическую сцену в graphicsView
     this->setRenderHint(QPainter::Antialiasing);    // Настраиваем рендер

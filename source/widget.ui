@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>843</width>
-    <height>578</height>
+    <width>1000</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="palette">
@@ -16,9 +16,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>239</red>
-        <green>41</green>
-        <blue>41</blue>
+        <red>255</red>
+        <green>198</green>
+        <blue>198</blue>
        </color>
       </brush>
      </colorrole>
@@ -34,18 +34,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>211</red>
-        <green>215</green>
-        <blue>207</blue>
+        <red>255</red>
+        <green>221</green>
+        <blue>221</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>232</red>
-        <green>185</green>
-        <blue>185</blue>
+        <red>255</red>
+        <green>180</green>
+        <blue>180</blue>
        </color>
       </brush>
      </colorrole>
@@ -54,9 +54,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>239</red>
-        <green>41</green>
-        <blue>41</blue>
+        <red>255</red>
+        <green>198</green>
+        <blue>198</blue>
        </color>
       </brush>
      </colorrole>
@@ -73,17 +73,17 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <green>221</green>
+        <blue>221</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>232</red>
-        <green>185</green>
-        <blue>185</blue>
+        <red>255</red>
+        <green>180</green>
+        <blue>180</blue>
        </color>
       </brush>
      </colorrole>
@@ -92,9 +92,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>239</red>
-        <green>41</green>
-        <blue>41</blue>
+        <red>255</red>
+        <green>198</green>
+        <blue>198</blue>
        </color>
       </brush>
      </colorrole>
@@ -110,18 +110,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>232</red>
-        <green>185</green>
-        <blue>185</blue>
+        <red>255</red>
+        <green>180</green>
+        <blue>180</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>232</red>
-        <green>185</green>
-        <blue>185</blue>
+        <red>255</red>
+        <green>180</green>
+        <blue>180</blue>
        </color>
       </brush>
      </colorrole>
@@ -134,114 +134,401 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="1">
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="text">
-      <string>Запустить сигнал</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="2">
-    <widget class="QPushButton" name="pushButton_5">
-     <property name="text">
-      <string>Сохранить схему</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="3">
-    <widget class="QPushButton" name="pushButton_6">
-     <property name="text">
-      <string>Открыть схему</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="4">
-    <widget class="QPushButton" name="pushButton_7">
-     <property name="text">
-      <string>Создать генератор</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../осциллограФ1.jpg</normaloff>../осциллограФ1.jpg</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>100</width>
-       <height>70</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1" rowspan="4" colspan="4">
-    <widget class="QWidget" name="widget" native="true">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="my_grpah_view" name="graphicsView">
-        <property name="minimumSize">
-         <size>
-          <width>450</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="dragMode">
-         <enum>QGraphicsView::RubberBandDrag</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="MyListWidget" name="listWidget">
-        <property name="dragEnabled">
-         <bool>true</bool>
-        </property>
-        <property name="dragDropMode">
-         <enum>QAbstractItemView::DragOnly</enum>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="text">
-      <string>Библиотека фильтров</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0">
-    <widget class="QPushButton" name="pushButton_8">
-     <property name="text">
-      <string>Библиотека генераторов</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <widget class="QPushButton" name="pushButton_9">
-     <property name="text">
-      <string>Сумматор</string>
-     </property>
-    </widget>
-   </item>
-  </layout>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>590</y>
+     <width>1000</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../Downloads/kittes.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_oscilloscope">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>0</y>
+     <width>160</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>oscilloscope</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/pngwing.com(15).png</normaloff>../Downloads/pngwing.com(15).png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>150</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_sin">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>110</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>253</red>
+         <green>166</green>
+         <blue>166</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>252</red>
+         <green>233</green>
+         <blue>79</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>253</red>
+         <green>166</green>
+         <blue>166</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>252</red>
+         <green>233</green>
+         <blue>79</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>252</red>
+         <green>233</green>
+         <blue>79</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>252</red>
+         <green>233</green>
+         <blue>79</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="text">
+    <string>sin</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/сигнал.png</normaloff>../Downloads/сигнал.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>650</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_cos">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>0</y>
+     <width>110</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>cos</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/сигнал.png</normaloff>../Downloads/сигнал.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>650</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_generator">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>70</y>
+     <width>110</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Generator</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_meandr">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>110</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>rectangular</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/pngwing.com(12).png</normaloff>../Downloads/pngwing.com(12).png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>70</width>
+     <height>45</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_combiner">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>0</y>
+     <width>160</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>combiner</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/adder.png</normaloff>../Downloads/adder.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>250</width>
+     <height>1000</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_transformer">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>0</y>
+     <width>160</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>transformer</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/pngwing.com(14).png</normaloff>../Downloads/pngwing.com(14).png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>100</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_lowfilter">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>70</y>
+     <width>120</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>low-pass filter</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/pngwing.com(16).png</normaloff>../Downloads/pngwing.com(16).png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_highfilter">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>0</y>
+     <width>120</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>high-pass filter</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/pngwing.com(16).png</normaloff>../Downloads/pngwing.com(16).png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_start">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>0</y>
+     <width>181</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>start</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Downloads/пуск.png</normaloff>../Downloads/пуск.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>150</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>981</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1001</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2"/>
+  </widget>
+  <widget class="my_grpah_view" name="graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>971</width>
+     <height>501</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>
    <class>my_grpah_view</class>
    <extends>QGraphicsView</extends>
-   <header>./headers/logic_of_fronted/my_grpah_view.h</header>
-  </customwidget>
-  <customwidget>
-   <class>MyListWidget</class>
-   <extends>QListWidget</extends>
-   <header>./headers/logic_of_fronted/mylistwidget.h</header>
+   <header>my_grpah_view.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

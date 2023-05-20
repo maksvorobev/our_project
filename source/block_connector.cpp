@@ -82,7 +82,9 @@ public:
         for (const auto &line : lines) {
             painter.drawLine(mapFromGlobal(line.start), mapFromGlobal(line.end));
         }
-    }
+
+
+}
 private:
     std::vector<Line> lines;
 };

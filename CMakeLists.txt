@@ -17,7 +17,6 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS PrintSupport REQUIRED)
 
 
 set (SOURCE
-    ./source/mainwindow.cpp
     ./source/main.cpp
     ./source/Forward_fourier_decomposer.cpp
     ./source/Signal.cpp
@@ -33,12 +32,10 @@ set (SOURCE
     ./source/Filters/High_pass_filter.cpp
     ./source/Filters/Low_pass_filter.cpp
     ./source/widget.cpp
-    ./source/form.cpp
     ./source/harmony_oscilloscope.cpp
     ./source/transformer.cpp
     ./source/Cambiner.cpp
     source/logic_of_fronted/mylistwidget.cpp
-    source/logic_of_fronted/CustomFrame.cpp
     source/logic_of_fronted/MoveItem.cpp
     source/logic_of_fronted/my_grpah_view.cpp
     ./FrontedObjects/FrontedOscilloscope.cpp
@@ -46,7 +43,7 @@ set (SOURCE
     FrontedObjects/VirualLabel.cpp
     FrontedObjects/DialogWindow.cpp
     FrontedObjects/FrontedGenerator.cpp
-    headers/logic_of_fronted/graphmap.cpp
+
     FrontedObjects/FrontedHighPassFilter.cpp
     FrontedObjects/FrontedLowPassFilter.cpp
     source/block_high_pass_filter.cpp
@@ -54,13 +51,13 @@ set (SOURCE
     FrontedObjects/FrontedCombiner.cpp
 
 
-
-
+    source/form_generator.cpp
+    source/form_filters.cpp
+    source/form_transformer.cpp
 
 
     )
 set (HEADERS
-    ./headers/mainwindow.h
     ./headers/Forward_fourier_decomposer.h
     ./headers/Reverse_fourier_decomposer.h
     ./headers/Signal.h
@@ -75,13 +72,11 @@ set (HEADERS
     ./headers/Filters/High_pass_filter.h
     ./headers/Filters/Low_pass_filter.h
     ./headers/widget.h
-    ./headers/form.h
     ./headers/harmony_oscilloscope.h
     ./headers/transformer.h
     ./headers/Spline.h
     ./headers/Cambiner.h
     headers/logic_of_fronted/mylistwidget.h
-    headers/logic_of_fronted/CustomFrame.h
     headers/logic_of_fronted/MoveItem.h
     headers/logic_of_fronted/my_grpah_view.h
     ./FrontedObjects/FrontedOscilloscope.h
@@ -95,16 +90,18 @@ set (HEADERS
     headers/Cambiner.h
     headers/Spline.h
     FrontedObjects/FrontedCombiner.h
-
-
+    headers/form_generator.h
+    headers/form_filters.h
+    headers/form_transformer.h
 
     )
 
 set(PROJECT_SOURCES
-        mainwindow.ui
         ./source/graph.ui
         ./source/widget.ui
-        ./source/form.ui
+        ./source/form_generator.ui
+        ./source/form_filters.ui
+        ./source/form_transformer.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
