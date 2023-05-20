@@ -20,8 +20,8 @@ Signal* block_high_pass_filter::getSignal() {
 void block_high_pass_filter::work()
 {
     if (ready()){
-        High_pass_filter filter(*input_signals[0], cutoff_frequency);
-        output_signal =  new Signal(filter.Get_Signal());
+        High_pass_filter filter(input_signals[0], cutoff_frequency);
+        output_signal =  filter.Get_Signal();
         qDebug() << "filter work " << cutoff_frequency;
     }
 }
