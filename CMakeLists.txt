@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GTK_CFLAGS} -fsanitize=address")
 project(our_project LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -35,10 +35,6 @@ set (SOURCE
     ./source/widget.cpp
     ./source/form.cpp
 
-    #./source/transformer.cpp
-    #./source/spline.cpp
-    #./source/cambiner.cpp
-
     source/logic_of_fronted/mylistwidget.cpp
     source/logic_of_fronted/CustomFrame.cpp
     source/logic_of_fronted/MoveItem.cpp
@@ -52,7 +48,7 @@ set (SOURCE
     FrontedObjects/FrontedLowPassFilter.cpp
     source/block_high_pass_filter.cpp
     source/Cambiner.cpp
-
+    FrontedObjects/FrontedCombiner.cpp
 
 
 
@@ -77,9 +73,6 @@ set (HEADERS
     ./headers/widget.h
     ./headers/form.h
 
-    #./headers/transformer.h
-    #./headers/spline.h
-    #./headers/cambiner.h
 
     headers/logic_of_fronted/mylistwidget.h
     headers/logic_of_fronted/CustomFrame.h
@@ -95,9 +88,7 @@ set (HEADERS
     headers/block_high_pass_filter.h
     headers/Cambiner.h
     headers/Spline.h
-
-
-
+    FrontedObjects/FrontedCombiner.h
 
 
 

@@ -39,7 +39,6 @@ void my_grpah_view::dropEvent(QDropEvent *event)
             FrontedHighPassFilter* oscilloscope = new FrontedHighPassFilter(&myMap);
             MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
             block_high_pass_filter* high_filter = new block_high_pass_filter;
-            //myController.addGenerator(low_filter);
             myMap[item->getLabel()->getIndex()] = high_filter;
             item->setPos(event->pos());
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
@@ -49,8 +48,16 @@ void my_grpah_view::dropEvent(QDropEvent *event)
             FrontedLowPassFilter* oscilloscope = new FrontedLowPassFilter(&myMap);
             MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
             block_low_pass_filter* low_filter = new block_low_pass_filter;
-            //myController.addGenerator(low_filter);
             myMap[item->getLabel()->getIndex()] = low_filter;
+            item->setPos(event->pos());
+            qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
+            scene->addItem(item);
+        }
+        if (t == "Combiner"){
+            FrontedCombiner* fronted_combiner = new FrontedCombiner(&myMap);
+            MoveItem *item = new MoveItem(nullptr, scene, fronted_combiner);
+            Cambiner* combiner = new Cambiner;
+            myMap[item->getLabel()->getIndex()] = combiner;
             item->setPos(event->pos());
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
             scene->addItem(item);
