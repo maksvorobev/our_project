@@ -52,7 +52,7 @@ set (SOURCE
     source/block_high_pass_filter.cpp
     source/Cambiner.cpp
     FrontedObjects/FrontedCombiner.cpp
-
+    FrontedObjects/FrontedTransformer.cpp
 
 
 
@@ -95,7 +95,7 @@ set (HEADERS
     headers/Cambiner.h
     headers/Spline.h
     FrontedObjects/FrontedCombiner.h
-
+    FrontedObjects/FrontedTransformer.h
 
 
     )

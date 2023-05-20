@@ -62,6 +62,15 @@ void my_grpah_view::dropEvent(QDropEvent *event)
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
             scene->addItem(item);
         }
+        if (t == "Transformer"){
+            FrontedTransformer* fronted_transformer = new FrontedTransformer(&myMap);
+            MoveItem *item = new MoveItem(nullptr, scene, fronted_transformer);
+            Transformer* transformer = new Transformer;
+            myMap[item->getLabel()->getIndex()] = transformer;
+            item->setPos(event->pos());
+            qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
+            scene->addItem(item);
+        }
         else {
             /*
         VirualLabel* lb = new QLabel;

@@ -1,7 +1,7 @@
-#include "FrontedGenerator.h"
+#include "FrontedTransformer.h"
 
 
-FrontedGenerator::FrontedGenerator(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
+FrontedTransformer::FrontedTransformer(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
 {
     SetAppearance();
 }
@@ -26,7 +26,7 @@ void FrontedOscilloscope::mousePressEvent(QMouseEvent *event)
 }
 */
 
-void FrontedGenerator::mousePressEvent(QMouseEvent *event)
+void FrontedTransformer::mousePressEvent(QMouseEvent *event)
 {
     if ((event->buttons() & Qt::LeftButton)) {
         qDebug() << "mousePressEvent";
@@ -48,34 +48,43 @@ void FrontedGenerator::mousePressEvent(QMouseEvent *event)
                         (*myMap)[text.toInt()]->addInput((*myMap)[curr_index]);
                         qDebug() << "AAAAA" << (*myMap)[curr_index]->getOutput().size();
 
+                       // ownBlock->addOutput(mp[int(text)])
                     });
                     dialog.exec();
-                }
-                if (selectedAction->text() == "set custom signal") {
+                    }
+                if (selectedAction->text() == "T_coef"){
                     DialogWindow dialog(this);
                     connect(&dialog, &DialogWindow::textEntered, this, [=](QString text) {
                         qDebug() << "Entered text: " << text;
-                        static_cast<Generator*>((*myMap)[curr_index])->setSignal(new Signal(text));
+                        static_cast<Transformer*>((*myMap)[curr_index])->setT_coef(text.toDouble());
                     });
-                    // Показываем диалоговое окно
-                     dialog.exec();
+                    dialog.exec();
                     }
-
-                }
+                    if (selectedAction->text() == "Ampl_coef"){
+                        DialogWindow dialog(this);
+                        connect(&dialog, &DialogWindow::textEntered, this, [=](QString text) {
+                            qDebug() << "Entered text: " << text;
+                            static_cast<Transformer*>((*myMap)[curr_index])->setAmpl_coef(text.toDouble());
+                        });
+                        // Показываем диалоговое окно
+                        dialog.exec();
+                        }
+             }
                 else {
                         qDebug() << "Диалоговое окно отменено";
                     }
 
                 }
+
     Q_UNUSED(event);
     return;
 }
 
-void FrontedGenerator::SetAppearance()
+void FrontedTransformer::SetAppearance()
 {
     curr_index = VirualLabel::my_index;
     menu.reset(new QMenu(this));
-    setText(QString("Generator") + QString::number(curr_index));
+    setText(QString("Transformer") + QString::number(curr_index));
 
     setAlignment(Qt::AlignCenter);// выравнивание текста по центру
     QFont font;
@@ -88,7 +97,8 @@ void FrontedGenerator::SetAppearance()
     // создание меню
     //this->menu = new QMenu(this);
     menu->addAction("establish a connection");
-    menu->addAction("set custom signal");
+    menu->addAction("T_coef");
+    menu->addAction("Ampl_coef");
 
     qDebug() << menu->actions()[0]->text();
 }
