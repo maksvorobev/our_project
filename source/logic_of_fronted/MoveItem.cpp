@@ -26,10 +26,7 @@ VirualLabel* MoveItem::getLabel()
     return myLabel;
 }
 
-MoveItem::~MoveItem()
-{
-
-}
+MoveItem::~MoveItem() {}
 
 /*
 void MoveItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)

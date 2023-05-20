@@ -1,5 +1,5 @@
 #include "FrontedCombiner.h"
-
+#include "./source/block_connector.cpp"
 
 FrontedCombiner::FrontedCombiner(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
 {
@@ -28,7 +28,9 @@ void FrontedCombiner::mousePressEvent(QMouseEvent *event)
                         (*myMap)[curr_index]->addOutput((*myMap)[text.toInt()]);
                         (*myMap)[text.toInt()]->addInput((*myMap)[curr_index]);
                         qDebug() << "AAAAA" << (*myMap)[curr_index]->getOutput().size();
-
+                        Block_connector* block_connector = new Block_connector();
+                        block_connector->connect_blocks((*myMap)[text.toInt()], (*myMap)[curr_index]);
+                        block_connector->paintEvent();
                        // ownBlock->addOutput(mp[int(text)])
                     });
 

@@ -1,30 +1,10 @@
 #include "FrontedOscilloscope.h"
-
+#include "./source/block_connector.cpp"
 
 FrontedOscilloscope::FrontedOscilloscope(std::map<int, Block*>* m) : VirualLabel(nullptr, m)
 {
     SetAppearance();
 }
-
-/*
-void FrontedOscilloscope::mousePressEvent(QMouseEvent *event)
-{
-
-    qDebug() << "mousePressEventlabel";
-    if (event->button() == Qt::RightButton) {
-            QMenu menu(this);
-            QAction *action1 = menu.addAction("Action 1");
-            QAction *action2 = menu.addAction("Action 2");
-            QAction *selectedAction = menu.exec(event->globalPos());
-            if (selectedAction == action1) {
-                // выполнение действия 1
-            } else if (selectedAction == action2) {
-                // выполнение действия 2
-            }
-        }
-
-}
-*/
 
 void FrontedOscilloscope::mousePressEvent(QMouseEvent *event)
 {
@@ -48,6 +28,9 @@ void FrontedOscilloscope::mousePressEvent(QMouseEvent *event)
                         (*myMap)[curr_index]->addOutput((*myMap)[text.toInt()]);
                         (*myMap)[text.toInt()]->addInput((*myMap)[curr_index]);
                         qDebug() << "AAAAA" << (*myMap)[curr_index]->getOutput().size();
+                        Block_connector* block_connector = new Block_connector();
+                        block_connector->connect_blocks((*myMap)[text.toInt()], (*myMap)[curr_index]);
+                        block_connector->paintEvent();
                     });
 
                     // Показываем диалоговое окно
