@@ -15,7 +15,7 @@ Generator::Generator(QString path)
 
 void Generator::setSignal(Signal* signal)
 {
-    input_signals[0] = signal;
+    output_signal = signal;
 }
 
 Signal* Generator::getSignal() { return output_signal; }

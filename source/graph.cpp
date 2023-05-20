@@ -29,7 +29,7 @@ void Graph::makePlot(Signal* signal)
     for (int i = 0; i < 3*N; i++){
         double X = h * i;
         x.push_back(X);
-        y.push_back(U[i % N + 1]);
+        y.push_back(U[i % N]);
     }
     ui->customPlot->addGraph();
     ui->customPlot->graph(0)->addData(x,y);

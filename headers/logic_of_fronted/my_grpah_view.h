@@ -16,6 +16,7 @@
 #include "./headers/block_high_pass_filter.h"
 #include "../../FrontedObjects/FrontedCombiner.h"
 #include "./headers/Cambiner.h"
+#include "../../FrontedObjects/FrontedTransformer.h"
 
 
 class QDropEvent;
