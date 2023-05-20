@@ -54,6 +54,9 @@ set (SOURCE
     FrontedObjects/FrontedCombiner.cpp
     FrontedObjects/FrontedTransformer.cpp
     FrontedObjects/FrontedHarmonyOscilloscope.cpp
+    source/Filters/Filter_Prototype.cpp
+
+
 
 
 
@@ -98,6 +101,12 @@ set (HEADERS
     FrontedObjects/FrontedCombiner.h
     FrontedObjects/FrontedTransformer.h
     FrontedObjects/FrontedHarmonyOscilloscope.h
+    headers/Filters/Filter_Prototype.h
+
+
+
+
+
     )
 
 set(PROJECT_SOURCES
