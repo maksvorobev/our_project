@@ -44,11 +44,13 @@ set (SOURCE
     source/logic_of_fronted/MoveItem.cpp
     source/logic_of_fronted/my_grpah_view.cpp
     ./FrontedObjects/FrontedOscilloscope.cpp
+    source/block_connector.cpp
     FrontedObjects/VirualLabel.cpp
     FrontedObjects/DialogWindow.cpp
     FrontedObjects/FrontedGenerator.cpp
     headers/logic_of_fronted/graphmap.cpp
     FrontedObjects/FrontedHighPassFilter.cpp
+
 
 
 
