@@ -9,6 +9,7 @@ MyListWidget::MyListWidget(QWidget *parent): QListWidget(parent){
     this->addItem("LowPassFilter");
     this->addItem("Combiner");
     this->addItem("Transformer");
+    this->addItem("HarmonyOscilloscope");
 
 }
 

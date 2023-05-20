@@ -71,6 +71,15 @@ void my_grpah_view::dropEvent(QDropEvent *event)
             qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
             scene->addItem(item);
         }
+        if (t == "HarmonyOscilloscope"){
+            FrontedHarmonyOscilloscope* frontend_oscilloscope = new FrontedHarmonyOscilloscope(&myMap);
+            MoveItem *item = new MoveItem(nullptr, scene, frontend_oscilloscope);
+            Harmony_oscilloscope* BackendOscilloscope = new Harmony_oscilloscope;
+            myMap[item->getLabel()->getIndex()] = BackendOscilloscope;
+            item->setPos(event->pos());
+            qDebug() << event->pos().x() << "  " << event->pos().y() << " " << item->isVisible();
+            scene->addItem(item);
+        }
         else {
             /*
         VirualLabel* lb = new QLabel;

@@ -53,6 +53,7 @@ set (SOURCE
     source/Cambiner.cpp
     FrontedObjects/FrontedCombiner.cpp
     FrontedObjects/FrontedTransformer.cpp
+    FrontedObjects/FrontedHarmonyOscilloscope.cpp
 
 
 
@@ -96,8 +97,7 @@ set (HEADERS
     headers/Spline.h
     FrontedObjects/FrontedCombiner.h
     FrontedObjects/FrontedTransformer.h
-
-
+    FrontedObjects/FrontedHarmonyOscilloscope.h
     )
 
 set(PROJECT_SOURCES

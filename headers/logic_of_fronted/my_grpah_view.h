@@ -17,6 +17,7 @@
 #include "../../FrontedObjects/FrontedCombiner.h"
 #include "./headers/Cambiner.h"
 #include "../../FrontedObjects/FrontedTransformer.h"
+#include "../../FrontedObjects/FrontedHarmonyOscilloscope.h"
 
 
 class QDropEvent;
