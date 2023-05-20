@@ -51,6 +51,7 @@ set (SOURCE
     FrontedObjects/FrontedHighPassFilter.cpp
     FrontedObjects/FrontedLowPassFilter.cpp
     source/block_high_pass_filter.cpp
+    source/Filters/Filter_Prototype.cpp
 
 
 
@@ -92,6 +93,7 @@ set (HEADERS
     FrontedObjects/FrontedHighPassFilter.h
     FrontedObjects/FrontedLowPassFilter.h
     headers/block_high_pass_filter.h
+    headers/Filters/Filter_Prototype.h
 
 
 
