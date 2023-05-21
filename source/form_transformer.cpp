@@ -24,6 +24,6 @@ void Form_transformer::on_buttonBox_rejected()
 }
 
 void Form_transformer::nashSlot() {
-    QString str31 =ui->lineEdit->text();
-    QString str32 =ui->lineEdit_2->text();
+    ampl_coef = ui->lineEdit->text().toDouble();
+    T_coef =ui->lineEdit_2->text().toDouble();
 }

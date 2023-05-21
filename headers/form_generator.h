@@ -18,10 +18,6 @@ public:
     ~Form_generator();
 
 
-public slots:
-    void nashSlot();
-
-
 private slots:
 
 
@@ -30,9 +26,16 @@ private slots:
     void on_buttonBox_rejected();
 
 
+    void on_way_to_set_signal_nums_toggled(bool checked);
+
+    void on_way_to_set_signal_path_toggled(bool checked);
+
 private:
     Ui::Form_generator *ui;
-
+    double dt;
+    double T;
+    std::vector<double> U;
+    QString path;
 
 };
 

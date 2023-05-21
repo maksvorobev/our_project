@@ -45,6 +45,8 @@ private slots:
 
     void on_button_start_clicked();
 
+    void on_button_create_harmonic_oscilloscope_clicked();
+
 private:
     Ui::Widget *ui;
     Form_generator form_generator;

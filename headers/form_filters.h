@@ -25,6 +25,7 @@ private slots:
 
 private:
     Ui::Form_filters *ui;
+    double frequency;
 };
 
 #endif // FORM_FILTERS_H

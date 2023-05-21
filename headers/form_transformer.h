@@ -25,6 +25,8 @@ private slots:
 
 private:
     Ui::Form_transformer *ui;
+    double ampl_coef;
+    double T_coef;
 };
 
 #endif // FORM_TRANSFORMER_H

@@ -19,15 +19,23 @@ Form_generator::~Form_generator()
     delete ui;
 }
 
-void Form_generator::nashSlot() {
-    QString str11 =ui->lineEdit->text();
-    QString str12 =ui->lineEdit_2->text();
-    QString str13 =ui->lineEdit_3->text();
-    QString str14 =ui->lineEdit_4->text();
-}
-
 void Form_generator::on_buttonBox_accepted()
 {
+    if (ui->way_to_set_signal_nums->isChecked())
+    {
+        dt = ui->lineEdit->text().toDouble();
+        T = ui->lineEdit_2->text().toDouble();
+        QString temp_str = ui->lineEdit_3->text();
+        QStringList list_str = temp_str.split(' ');
+        for (int i = 0; i < list_str.size(); i++)
+        {
+            U.push_back(list_str[i].toDouble());
+        }
+    }
+    if (ui->way_to_set_signal_path->isChecked())
+    {
+        path = ui->lineEdit_4->text();
+    }
     close();
 }
 

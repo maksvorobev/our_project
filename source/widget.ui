@@ -189,7 +189,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>110</width>
+     <width>111</width>
      <height>71</height>
     </rect>
    </property>
@@ -347,10 +347,10 @@
   <widget class="QToolButton" name="button_create_combiner">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>0</y>
-     <width>160</width>
-     <height>141</height>
+     <x>220</x>
+     <y>70</y>
+     <width>131</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -380,8 +380,8 @@
     <rect>
      <x>220</x>
      <y>0</y>
-     <width>160</width>
-     <height>141</height>
+     <width>131</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -502,17 +502,6 @@
     <string/>
    </property>
   </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1001</width>
-     <height>141</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2"/>
-  </widget>
   <widget class="my_grpah_view" name="graphicsView">
    <property name="geometry">
     <rect>
@@ -521,6 +510,19 @@
      <width>971</width>
      <height>501</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="button_create_harmonic_oscilloscope">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>0</y>
+     <width>191</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>harmonic oscilloscope</string>
    </property>
   </widget>
  </widget>

@@ -14,7 +14,7 @@ Form_filters::~Form_filters()
 }
 
 void Form_filters::nashSlot() {
-    QString str21 =ui->lineEdit->text();
+    frequency =ui->lineEdit->text().toDouble();
 }
 
 void Form_filters::on_buttonBox_accepted()

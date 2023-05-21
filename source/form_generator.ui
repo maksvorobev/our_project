@@ -139,7 +139,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="way_to_set_signal_nums">
       <property name="text">
        <string>Задать сигнал</string>
       </property>
@@ -148,7 +148,7 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>частота дискретизации</string>
+       <string>период дискретизации</string>
       </property>
      </widget>
     </item>
@@ -178,7 +178,7 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QRadioButton" name="radioButton_2">
+       <widget class="QRadioButton" name="way_to_set_signal_path">
         <property name="text">
          <string>Путь к файлу</string>
         </property>
