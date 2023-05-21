@@ -31,6 +31,11 @@ public:
     void set_main_controller(Main_Controller* controller);
 
 
+    void create_oscilloscope();
+    void create_generator(Signal *s);
+    void create_high_pass_filter(int cutoff_frequency);
+    void create_low_pass_filter(int cutoff_frequency);
+    void create_combiner();
 protected:
    // drag&drop
    void dropEvent(QDropEvent *event) override;

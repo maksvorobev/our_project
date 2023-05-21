@@ -25,12 +25,13 @@ Widget::~Widget()
 
 void Widget::on_button_create_combiner_clicked()
 {
-
+    ui->graphicsView->create_combiner();
 }
 
 void Widget::on_button_create_cos_clicked()
 {
-
+    Signal* s = new Signal("/home/vboxuser/Documents/GitHub/our_project5/signals/Cos.txt");
+    ui->graphicsView->create_generator(s);
 }
 
 void Widget::on_button_create_generator_clicked()
@@ -50,17 +51,19 @@ void Widget::on_button_create_lowfilter_clicked()
 
 void Widget::on_button_create_meandr_clicked()
 {
-
+    Signal* s = new Signal("/home/vboxuser/Documents/GitHub/our_project5/signals/Meander.txt");
+    ui->graphicsView->create_generator(s);
 }
 
 void Widget::on_button_create_oscilloscope_clicked()
 {
-
+    ui->graphicsView->create_oscilloscope();
 }
 
 void Widget::on_button_create_sin_clicked()
 {
-
+    Signal* s = new Signal(QString("/home/vboxuser/Documents/GitHub/our_project5/signals/Sin.txt"));
+    ui->graphicsView->create_generator(s);
 }
 
 void Widget::on_button_create_transformer_clicked()
