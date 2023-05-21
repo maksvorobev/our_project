@@ -2,6 +2,7 @@
 #define FORM_FILTERS_H
 
 #include <QWidget>
+#include "./headers/logic_of_fronted/my_grpah_view.h"
 
 namespace Ui {
 class Form_filters;
@@ -13,6 +14,7 @@ class Form_filters : public QWidget
 
 public:
     explicit Form_filters(QWidget *parent = nullptr);
+    my_grpah_view* my;
     ~Form_filters();
 
 public slots:

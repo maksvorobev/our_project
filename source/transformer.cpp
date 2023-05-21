@@ -7,6 +7,16 @@ Transformer::Transformer(double ampl_coef, double T_coef) : ampl_coef(ampl_coef)
 
 Signal* Transformer::getSignal() { return output_signal; }
 
+void Transformer::setAmpl_coef(double newAmpl_coef)
+{
+    ampl_coef = newAmpl_coef;
+}
+
+void Transformer::setT_coef(double newT_coef)
+{
+    T_coef = newT_coef;
+}
+
 void Transformer::TransformSignal() {
     double T = input_signals[0]->getT() / T_coef;
     double dt = input_signals[0]->getdt() / T_coef;

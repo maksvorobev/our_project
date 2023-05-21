@@ -4,6 +4,7 @@
 
 #include <QWidget>
 #include <QLineEdit>
+#include "./headers/logic_of_fronted/my_grpah_view.h"
 
 namespace Ui {
 class Form_generator;
@@ -15,6 +16,7 @@ class Form_generator : public QWidget
 
 public:
     explicit Form_generator(QWidget *parent = nullptr);
+    my_grpah_view* my;
     ~Form_generator();
 
 
@@ -32,6 +34,7 @@ private slots:
 
 private:
     Ui::Form_generator *ui;
+
     double dt;
     double T;
     std::vector<double> U;

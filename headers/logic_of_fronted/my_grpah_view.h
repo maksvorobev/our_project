@@ -16,6 +16,8 @@
 #include "./headers/block_high_pass_filter.h"
 #include "../../FrontedObjects/FrontedCombiner.h"
 #include "./headers/Cambiner.h"
+#include "../../FrontedObjects/FrontedHarmonyOscilloscope.h"
+#include "../../FrontedObjects/FrontedTransformer.h"
 
 
 class QDropEvent;
@@ -33,9 +35,11 @@ public:
 
     void create_oscilloscope();
     void create_generator(Signal *s);
-    void create_high_pass_filter(int cutoff_frequency);
-    void create_low_pass_filter(int cutoff_frequency);
+    void create_high_pass_filter();
+    void create_low_pass_filter();
     void create_combiner();
+    void create_harmony_oscilloscope();
+    void create_transformer(double T_coef, double a_coef);
 protected:
    // drag&drop
    void dropEvent(QDropEvent *event) override;

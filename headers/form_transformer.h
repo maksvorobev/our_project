@@ -2,6 +2,7 @@
 #define FORM_TRANSFORMER_H
 
 #include <QWidget>
+#include "./headers/logic_of_fronted/my_grpah_view.h"
 
 namespace Ui {
 class Form_transformer;
@@ -13,6 +14,7 @@ class Form_transformer : public QWidget
 
 public:
     explicit Form_transformer(QWidget *parent = nullptr);
+    my_grpah_view* my;
     ~Form_transformer();
 
 public slots:

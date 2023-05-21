@@ -15,6 +15,10 @@ Form_transformer::~Form_transformer()
 
 void Form_transformer::on_buttonBox_accepted()
 {
+    ampl_coef = ui->lineEdit->text().toDouble();
+    T_coef =ui->lineEdit_2->text().toDouble();
+    my->create_transformer(T_coef, ampl_coef);
+    close();
     close();
 }
 
@@ -24,6 +28,5 @@ void Form_transformer::on_buttonBox_rejected()
 }
 
 void Form_transformer::nashSlot() {
-    ampl_coef = ui->lineEdit->text().toDouble();
-    T_coef =ui->lineEdit_2->text().toDouble();
+
 }

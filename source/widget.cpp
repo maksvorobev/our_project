@@ -16,6 +16,9 @@ Widget::Widget(QWidget *parent)
     myController = new Main_Controller;
 
     ui->graphicsView->set_main_controller(myController);
+    form_generator.my = ui->graphicsView;
+    form_filters.my = ui->graphicsView;
+    form_transformer.my = ui->graphicsView;
 
 }
 Widget::~Widget()
@@ -46,7 +49,7 @@ void Widget::on_button_create_highfilter_clicked()
 
 void Widget::on_button_create_lowfilter_clicked()
 {
-    form_filters.show();
+    ui->graphicsView->create_low_pass_filter();
 }
 
 void Widget::on_button_create_meandr_clicked()

@@ -25,22 +25,20 @@ void my_grpah_view::create_generator(Signal* s)
     item->setPos(QPoint(50, 50));
     scene->addItem(item);
 }
-void my_grpah_view::create_high_pass_filter(int cutoff_frequency)
+void my_grpah_view::create_high_pass_filter()
 {
     FrontedHighPassFilter* high_pass_filter = new FrontedHighPassFilter(&myMap);
     MoveItem *item = new MoveItem(nullptr, scene, high_pass_filter);
     block_high_pass_filter* high_filter = new block_high_pass_filter;
-    high_filter->set_cutoff_frequency(cutoff_frequency);
     myMap[item->getLabel()->getIndex()] = high_filter;
     item->setPos(QPoint(50, 50));
     scene->addItem(item);
 }
-void my_grpah_view::create_low_pass_filter(int cutoff_frequency)
+void my_grpah_view::create_low_pass_filter()
 {
     FrontedLowPassFilter* low_pass_filter = new FrontedLowPassFilter(&myMap);
     MoveItem *item = new MoveItem(nullptr, scene, low_pass_filter);
     block_low_pass_filter* low_filter = new block_low_pass_filter;
-    low_filter->set_cutoff_frequency(cutoff_frequency);
     myMap[item->getLabel()->getIndex()] = low_filter;
     item->setPos(QPoint(50, 50));
     scene->addItem(item);
@@ -51,6 +49,26 @@ void my_grpah_view::create_combiner()
     MoveItem *item = new MoveItem(nullptr, scene, fronted_combiner);
     Cambiner* combiner = new Cambiner;
     myMap[item->getLabel()->getIndex()] = combiner;
+    item->setPos(QPoint(50, 50));
+    scene->addItem(item);
+}
+void my_grpah_view::create_harmony_oscilloscope()
+{
+    FrontedHarmonyOscilloscope* oscilloscope = new FrontedHarmonyOscilloscope(&myMap);
+    MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
+    Harmony_oscilloscope* BackendOscilloscope = new Harmony_oscilloscope;
+    myMap[item->getLabel()->getIndex()] = BackendOscilloscope;
+    item->setPos(QPoint(50, 50));
+    scene->addItem(item);
+}
+void my_grpah_view::create_transformer(double T_coef, double a_coef)
+{
+    FrontedTransformer* transformer = new FrontedTransformer(&myMap);
+    MoveItem *item = new MoveItem(nullptr, scene, transformer);
+    Transformer* BackendTransformer= new Transformer;
+    myMap[item->getLabel()->getIndex()] = BackendTransformer;
+    BackendTransformer->setAmpl_coef(a_coef);
+    BackendTransformer->setT_coef(T_coef);
     item->setPos(QPoint(50, 50));
     scene->addItem(item);
 }

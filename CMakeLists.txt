@@ -43,13 +43,13 @@ set (SOURCE
     FrontedObjects/VirualLabel.cpp
     FrontedObjects/DialogWindow.cpp
     FrontedObjects/FrontedGenerator.cpp
-
+    FrontedObjects/FrontedHarmonyOscilloscope.cpp
     FrontedObjects/FrontedHighPassFilter.cpp
     FrontedObjects/FrontedLowPassFilter.cpp
     source/block_high_pass_filter.cpp
     source/Cambiner.cpp
     FrontedObjects/FrontedCombiner.cpp
-
+    FrontedObjects/FrontedTransformer.cpp
 
     source/form_generator.cpp
     source/form_filters.cpp
@@ -93,7 +93,8 @@ set (HEADERS
     headers/form_generator.h
     headers/form_filters.h
     headers/form_transformer.h
-
+    FrontedObjects/FrontedHarmonyOscilloscope.h
+    FrontedObjects/FrontedTransformer.h
     )
 
 set(PROJECT_SOURCES

@@ -17,4 +17,6 @@ public:
     Signal* getSignal() override;
     void set_in_input_Signal (Signal* signal) override;
     void work() override;
+    void setAmpl_coef(double newAmpl_coef);
+    void setT_coef(double newT_coef);
 };

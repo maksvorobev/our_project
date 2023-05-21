@@ -1,5 +1,4 @@
-#pragma once
-
+#include "./headers/generator.h"
 #include "./headers/form_generator.h"
 #include "ui_form_generator.h"
 #include <QLineEdit>
@@ -11,8 +10,8 @@ Form_generator::Form_generator(QWidget *parent) :
     ui(new Ui::Form_generator)
 {
     ui->setupUi(this);
-
 }
+
 
 Form_generator::~Form_generator()
 {
@@ -31,10 +30,14 @@ void Form_generator::on_buttonBox_accepted()
         {
             U.push_back(list_str[i].toDouble());
         }
+        Signal* s = new Signal(U, dt, T);
+        my->create_generator(s);
     }
     if (ui->way_to_set_signal_path->isChecked())
     {
         path = ui->lineEdit_4->text();
+        Signal* s = new Signal(path);
+        my->create_generator(s);
     }
     close();
 }
