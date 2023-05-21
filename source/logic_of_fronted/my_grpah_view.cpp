@@ -6,7 +6,54 @@
 #include <QMimeData>
 #include <QLabel>
 
-
+void my_grpah_view::create_oscilloscope()
+{
+    FrontedOscilloscope* oscilloscope = new FrontedOscilloscope(&myMap);
+    MoveItem *item = new MoveItem(nullptr, scene, oscilloscope);
+    Oscilloscope* BackendOscilloscope = new Oscilloscope;
+    myMap[item->getLabel()->getIndex()] = BackendOscilloscope;
+    item->setPos(QPoint(50, 50));
+    scene->addItem(item);
+}
+void my_grpah_view::create_generator(Signal* s)
+{
+    FrontedGenerator* generator = new FrontedGenerator(&myMap);
+    MoveItem *item = new MoveItem(nullptr, scene, generator);
+    Generator* BackendGenerator = new Generator(s);
+    myController->addGenerator(BackendGenerator);
+    myMap[item->getLabel()->getIndex()] = BackendGenerator;
+    item->setPos(QPoint(50, 50));
+    scene->addItem(item);
+}
+void my_grpah_view::create_high_pass_filter(int cutoff_frequency)
+{
+    FrontedHighPassFilter* high_pass_filter = new FrontedHighPassFilter(&myMap);
+    MoveItem *item = new MoveItem(nullptr, scene, high_pass_filter);
+    block_high_pass_filter* high_filter = new block_high_pass_filter;
+    high_filter->set_cutoff_frequency(cutoff_frequency);
+    myMap[item->getLabel()->getIndex()] = high_filter;
+    item->setPos(QPoint(50, 50));
+    scene->addItem(item);
+}
+void my_grpah_view::create_low_pass_filter(int cutoff_frequency)
+{
+    FrontedLowPassFilter* low_pass_filter = new FrontedLowPassFilter(&myMap);
+    MoveItem *item = new MoveItem(nullptr, scene, low_pass_filter);
+    block_low_pass_filter* low_filter = new block_low_pass_filter;
+    low_filter->set_cutoff_frequency(cutoff_frequency);
+    myMap[item->getLabel()->getIndex()] = low_filter;
+    item->setPos(QPoint(50, 50));
+    scene->addItem(item);
+}
+void my_grpah_view::create_combiner()
+{
+    FrontedCombiner* fronted_combiner = new FrontedCombiner(&myMap);
+    MoveItem *item = new MoveItem(nullptr, scene, fronted_combiner);
+    Cambiner* combiner = new Cambiner;
+    myMap[item->getLabel()->getIndex()] = combiner;
+    item->setPos(QPoint(50, 50));
+    scene->addItem(item);
+}
 void my_grpah_view::dropEvent(QDropEvent *event)
 {
     qDebug() << "drop";
