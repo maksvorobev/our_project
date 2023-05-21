@@ -44,7 +44,7 @@ void Widget::on_button_create_generator_clicked()
 
 void Widget::on_button_create_highfilter_clicked()
 {
-    form_filters.show();
+    ui->graphicsView->create_high_pass_filter();
 }
 
 void Widget::on_button_create_lowfilter_clicked()
@@ -81,5 +81,5 @@ void Widget::on_button_start_clicked()
 
 void Widget::on_button_create_harmonic_oscilloscope_clicked()
 {
-
+    ui->graphicsView->create_harmony_oscilloscope();
 }

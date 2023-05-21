@@ -19,7 +19,6 @@ void Form_transformer::on_buttonBox_accepted()
     T_coef =ui->lineEdit_2->text().toDouble();
     my->create_transformer(T_coef, ampl_coef);
     close();
-    close();
 }
 
 void Form_transformer::on_buttonBox_rejected()

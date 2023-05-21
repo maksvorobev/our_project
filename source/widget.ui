@@ -449,11 +449,11 @@
     </font>
    </property>
    <property name="text">
-    <string>start</string>
+    <string>Start</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../Downloads/пуск.png</normaloff>../Downloads/пуск.png</iconset>
+     <normaloff>../../пуск.png</normaloff>../../пуск.png</iconset>
    </property>
    <property name="iconSize">
     <size>
