@@ -29,5 +29,5 @@ public:
     Signal* getSignal() override;
     void addInput(Block* input);
     void addOutput(Block* output);
-    void setSignal(Signal* signal);
+
 };

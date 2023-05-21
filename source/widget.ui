@@ -319,7 +319,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>rectangular</string>
+    <string>meander</string>
    </property>
    <property name="icon">
     <iconset>

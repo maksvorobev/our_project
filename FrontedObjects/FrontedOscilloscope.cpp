@@ -63,8 +63,6 @@ void FrontedOscilloscope::SetAppearance()
     // создание меню
     //this->menu = new QMenu(this);
     menu->addAction("establish a connection");
-    menu->addAction("Action 2");
-
     qDebug() << menu->actions()[0]->text();
 }
 
