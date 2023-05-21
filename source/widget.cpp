@@ -75,3 +75,8 @@ void Widget::on_button_start_clicked()
 {
     myController->startCircuit();
 }
+
+void Widget::on_button_create_harmonic_oscilloscope_clicked()
+{
+
+}
